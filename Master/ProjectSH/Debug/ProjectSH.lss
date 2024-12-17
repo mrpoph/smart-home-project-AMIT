@@ -1,0 +1,3511 @@
+
+ProjectSH.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000016b2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000266  00800060  000016b2  00001746  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000013  008002c6  008002c6  000019ac  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000019ac  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000019dc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000002b8  00000000  00000000  00001a18  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00004546  00000000  00000000  00001cd0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00001110  00000000  00000000  00006216  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001e34  00000000  00000000  00007326  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004dc  00000000  00000000  0000915c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000c47  00000000  00000000  00009638  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001c80  00000000  00000000  0000a27f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000001f8  00000000  00000000  0000beff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 56 00 	jmp	0xac	; 0xac <__ctors_end>
+       4:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+       8:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+       c:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      10:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      14:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      18:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      1c:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      20:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      24:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      28:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      2c:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      30:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      34:	0c 94 49 06 	jmp	0xc92	; 0xc92 <__vector_13>
+      38:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      3c:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      40:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      44:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      48:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      4c:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      50:	0c 94 73 00 	jmp	0xe6	; 0xe6 <__bad_interrupt>
+      54:	ab 04       	cpc	r10, r11
+      56:	44 06       	cpc	r4, r20
+      58:	44 06       	cpc	r4, r20
+      5a:	44 06       	cpc	r4, r20
+      5c:	44 06       	cpc	r4, r20
+      5e:	44 06       	cpc	r4, r20
+      60:	00 05       	cpc	r16, r0
+      62:	13 05       	cpc	r17, r3
+      64:	26 05       	cpc	r18, r6
+      66:	39 05       	cpc	r19, r9
+      68:	4c 05       	cpc	r20, r12
+      6a:	5f 05       	cpc	r21, r15
+      6c:	67 05       	cpc	r22, r7
+      6e:	7a 05       	cpc	r23, r10
+      70:	af 05       	cpc	r26, r15
+      72:	44 06       	cpc	r4, r20
+      74:	44 06       	cpc	r4, r20
+      76:	44 06       	cpc	r4, r20
+      78:	44 06       	cpc	r4, r20
+      7a:	44 06       	cpc	r4, r20
+      7c:	44 06       	cpc	r4, r20
+      7e:	44 06       	cpc	r4, r20
+      80:	44 06       	cpc	r4, r20
+      82:	44 06       	cpc	r4, r20
+      84:	0d 06       	cpc	r0, r29
+      86:	6e 06       	cpc	r6, r30
+      88:	78 06       	cpc	r7, r24
+      8a:	82 06       	cpc	r8, r18
+      8c:	8c 06       	cpc	r8, r28
+      8e:	96 06       	cpc	r9, r22
+      90:	a0 06       	cpc	r10, r16
+      92:	aa 06       	cpc	r10, r26
+      94:	b4 06       	cpc	r11, r20
+      96:	c3 06       	cpc	r12, r19
+      98:	ee 06       	cpc	r14, r30
+      9a:	ee 06       	cpc	r14, r30
+      9c:	ee 06       	cpc	r14, r30
+      9e:	ee 06       	cpc	r14, r30
+      a0:	ee 06       	cpc	r14, r30
+      a2:	ee 06       	cpc	r14, r30
+      a4:	ee 06       	cpc	r14, r30
+      a6:	ee 06       	cpc	r14, r30
+      a8:	ee 06       	cpc	r14, r30
+      aa:	d2 06       	cpc	r13, r18
+
+000000ac <__ctors_end>:
+      ac:	11 24       	eor	r1, r1
+      ae:	1f be       	out	0x3f, r1	; 63
+      b0:	cf e5       	ldi	r28, 0x5F	; 95
+      b2:	d8 e0       	ldi	r29, 0x08	; 8
+      b4:	de bf       	out	0x3e, r29	; 62
+      b6:	cd bf       	out	0x3d, r28	; 61
+
+000000b8 <__do_copy_data>:
+      b8:	12 e0       	ldi	r17, 0x02	; 2
+      ba:	a0 e6       	ldi	r26, 0x60	; 96
+      bc:	b0 e0       	ldi	r27, 0x00	; 0
+      be:	e2 eb       	ldi	r30, 0xB2	; 178
+      c0:	f6 e1       	ldi	r31, 0x16	; 22
+      c2:	02 c0       	rjmp	.+4      	; 0xc8 <__do_copy_data+0x10>
+      c4:	05 90       	lpm	r0, Z+
+      c6:	0d 92       	st	X+, r0
+      c8:	a6 3c       	cpi	r26, 0xC6	; 198
+      ca:	b1 07       	cpc	r27, r17
+      cc:	d9 f7       	brne	.-10     	; 0xc4 <__do_copy_data+0xc>
+
+000000ce <__do_clear_bss>:
+      ce:	22 e0       	ldi	r18, 0x02	; 2
+      d0:	a6 ec       	ldi	r26, 0xC6	; 198
+      d2:	b2 e0       	ldi	r27, 0x02	; 2
+      d4:	01 c0       	rjmp	.+2      	; 0xd8 <.do_clear_bss_start>
+
+000000d6 <.do_clear_bss_loop>:
+      d6:	1d 92       	st	X+, r1
+
+000000d8 <.do_clear_bss_start>:
+      d8:	a9 3d       	cpi	r26, 0xD9	; 217
+      da:	b2 07       	cpc	r27, r18
+      dc:	e1 f7       	brne	.-8      	; 0xd6 <.do_clear_bss_loop>
+      de:	0e 94 8c 08 	call	0x1118	; 0x1118 <main>
+      e2:	0c 94 57 0b 	jmp	0x16ae	; 0x16ae <_exit>
+
+000000e6 <__bad_interrupt>:
+      e6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ea <APP_init>:
+Uint8 bluetooth_pass_check[PASS_SIZE];
+
+void APP_init(void){
+	//****************** INITIALIZATIONS ****************************
+		SPI_InitType options = {MASTER};
+		DIO_Init();
+      ea:	0e 94 e1 09 	call	0x13c2	; 0x13c2 <DIO_Init>
+		LCD_Init();
+      ee:	0e 94 0f 08 	call	0x101e	; 0x101e <LCD_Init>
+		SPI_Init(options);
+      f2:	81 e0       	ldi	r24, 0x01	; 1
+      f4:	0e 94 87 0a 	call	0x150e	; 0x150e <SPI_Init>
+		Bluetooth_Init();
+      f8:	0e 94 7b 07 	call	0xef6	; 0xef6 <Bluetooth_Init>
+	//***********************  **************************************
+		Buz_DIR_OUT(Buzzer,Output);
+      fc:	61 e0       	ldi	r22, 0x01	; 1
+      fe:	84 e1       	ldi	r24, 0x14	; 20
+     100:	0e 94 ff 06 	call	0xdfe	; 0xdfe <Buz_DIR_OUT>
+		LED_DIR_OUT(ADMIN_LED_PORT,Output);
+     104:	61 e0       	ldi	r22, 0x01	; 1
+     106:	85 e1       	ldi	r24, 0x15	; 21
+     108:	0e 94 81 08 	call	0x1102	; 0x1102 <LED_DIR_OUT>
+		LED_DIR_OUT(GUEST_LED_PORT,Output);
+     10c:	61 e0       	ldi	r22, 0x01	; 1
+     10e:	86 e1       	ldi	r24, 0x16	; 22
+     110:	0e 94 81 08 	call	0x1102	; 0x1102 <LED_DIR_OUT>
+		LED_DIR_OUT(NO_MODE_PORT,Output);
+     114:	61 e0       	ldi	r22, 0x01	; 1
+     116:	87 e1       	ldi	r24, 0x17	; 23
+     118:	0e 94 81 08 	call	0x1102	; 0x1102 <LED_DIR_OUT>
+		LED_DIR_OUT(Access_LED_PORT,Output);
+     11c:	61 e0       	ldi	r22, 0x01	; 1
+     11e:	83 e1       	ldi	r24, 0x13	; 19
+     120:	0e 94 81 08 	call	0x1102	; 0x1102 <LED_DIR_OUT>
+		LED_DIR_OUT(Bluetooth_LED_PORT,Output);
+     124:	61 e0       	ldi	r22, 0x01	; 1
+     126:	82 e1       	ldi	r24, 0x12	; 18
+     128:	0e 94 81 08 	call	0x1102	; 0x1102 <LED_DIR_OUT>
+	//******************** END **************************************
+	LED_TurnOn(NO_MODE_PORT);
+     12c:	87 e1       	ldi	r24, 0x17	; 23
+     12e:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+	//***************************INITIAL PRINT ****************************************
+	LCD_String("Welcome to home");
+     132:	89 eb       	ldi	r24, 0xB9	; 185
+     134:	90 e0       	ldi	r25, 0x00	; 0
+     136:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     13a:	2f ef       	ldi	r18, 0xFF	; 255
+     13c:	83 ed       	ldi	r24, 0xD3	; 211
+     13e:	90 e3       	ldi	r25, 0x30	; 48
+     140:	21 50       	subi	r18, 0x01	; 1
+     142:	80 40       	sbci	r24, 0x00	; 0
+     144:	90 40       	sbci	r25, 0x00	; 0
+     146:	e1 f7       	brne	.-8      	; 0x140 <APP_init+0x56>
+     148:	00 c0       	rjmp	.+0      	; 0x14a <APP_init+0x60>
+     14a:	00 00       	nop
+	_delay_ms(1000);
+	LCD_Clear();
+     14c:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     150:	08 95       	ret
+
+00000152 <APP_First_start>:
+	//*************************** INITIAL PRINT END *************************************************
+}
+
+void APP_First_start(){
+	
+	if ( (EEPROM_ReadByte(ADMIN_PASS_STATUS_ADDRESS) != PASS_SET) || (EEPROM_ReadByte(GUEST_PASS_STATUS_ADDRESS) != PASS_SET) ){
+     152:	80 e0       	ldi	r24, 0x00	; 0
+     154:	91 e0       	ldi	r25, 0x01	; 1
+     156:	0e 94 0a 07 	call	0xe14	; 0xe14 <EEPROM_ReadByte>
+     15a:	81 30       	cpi	r24, 0x01	; 1
+     15c:	39 f4       	brne	.+14     	; 0x16c <APP_First_start+0x1a>
+     15e:	81 e0       	ldi	r24, 0x01	; 1
+     160:	91 e0       	ldi	r25, 0x01	; 1
+     162:	0e 94 0a 07 	call	0xe14	; 0xe14 <EEPROM_ReadByte>
+     166:	81 30       	cpi	r24, 0x01	; 1
+     168:	09 f4       	brne	.+2      	; 0x16c <APP_First_start+0x1a>
+     16a:	ef c0       	rjmp	.+478    	; 0x34a <APP_First_start+0x1f8>
+		LCD_String("Logging in");
+     16c:	89 ec       	ldi	r24, 0xC9	; 201
+     16e:	90 e0       	ldi	r25, 0x00	; 0
+     170:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+		LCD_SetPos(2,0);
+     174:	60 e0       	ldi	r22, 0x00	; 0
+     176:	82 e0       	ldi	r24, 0x02	; 2
+     178:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("for first time");
+     17c:	84 ed       	ldi	r24, 0xD4	; 212
+     17e:	90 e0       	ldi	r25, 0x00	; 0
+     180:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     184:	2f ef       	ldi	r18, 0xFF	; 255
+     186:	83 ed       	ldi	r24, 0xD3	; 211
+     188:	90 e3       	ldi	r25, 0x30	; 48
+     18a:	21 50       	subi	r18, 0x01	; 1
+     18c:	80 40       	sbci	r24, 0x00	; 0
+     18e:	90 40       	sbci	r25, 0x00	; 0
+     190:	e1 f7       	brne	.-8      	; 0x18a <APP_First_start+0x38>
+     192:	00 c0       	rjmp	.+0      	; 0x194 <APP_First_start+0x42>
+     194:	00 00       	nop
+		_delay_ms(1000);
+		LCD_Clear();
+     196:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+		LCD_SetPos(1,0);
+     19a:	60 e0       	ldi	r22, 0x00	; 0
+     19c:	81 e0       	ldi	r24, 0x01	; 1
+     19e:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("Set Admin pass");
+     1a2:	83 ee       	ldi	r24, 0xE3	; 227
+     1a4:	90 e0       	ldi	r25, 0x00	; 0
+     1a6:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+		LCD_SetPos(2,0);
+     1aa:	60 e0       	ldi	r22, 0x00	; 0
+     1ac:	82 e0       	ldi	r24, 0x02	; 2
+     1ae:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("Admin pass: ");
+     1b2:	82 ef       	ldi	r24, 0xF2	; 242
+     1b4:	90 e0       	ldi	r25, 0x00	; 0
+     1b6:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+	
+	//*********************SET ADMIN PASSWORD *****************************
+
+		while(Cpass < PASS_SIZE){
+     1ba:	33 c0       	rjmp	.+102    	; 0x222 <APP_First_start+0xd0>
+			key_pressed = NOT_PRESSED;
+     1bc:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     1c0:	04 c0       	rjmp	.+8      	; 0x1ca <APP_First_start+0x78>
+			{
+				key_pressed = GetKeyPress();//if the user pressed any button in keypad save the value in key_pressed
+     1c2:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     1c6:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+	
+	//*********************SET ADMIN PASSWORD *****************************
+
+		while(Cpass < PASS_SIZE){
+			key_pressed = NOT_PRESSED;
+			while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     1ca:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     1ce:	88 23       	and	r24, r24
+     1d0:	c1 f3       	breq	.-16     	; 0x1c2 <APP_First_start+0x70>
+			{
+				key_pressed = GetKeyPress();//if the user pressed any button in keypad save the value in key_pressed
+				//itoa(key_pressed,password,10);
+			}
+			password[Cpass] = key_pressed;
+     1d2:	e0 91 c9 02 	lds	r30, 0x02C9	; 0x8002c9 <Cpass>
+     1d6:	f0 e0       	ldi	r31, 0x00	; 0
+     1d8:	e3 53       	subi	r30, 0x33	; 51
+     1da:	fd 4f       	sbci	r31, 0xFD	; 253
+     1dc:	80 83       	st	Z, r24
+			LCD_Char(key_pressed);
+     1de:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     1e2:	2f ef       	ldi	r18, 0xFF	; 255
+     1e4:	85 ea       	ldi	r24, 0xA5	; 165
+     1e6:	9e e0       	ldi	r25, 0x0E	; 14
+     1e8:	21 50       	subi	r18, 0x01	; 1
+     1ea:	80 40       	sbci	r24, 0x00	; 0
+     1ec:	90 40       	sbci	r25, 0x00	; 0
+     1ee:	e1 f7       	brne	.-8      	; 0x1e8 <APP_First_start+0x96>
+     1f0:	00 c0       	rjmp	.+0      	; 0x1f2 <APP_First_start+0xa0>
+     1f2:	00 00       	nop
+			_delay_ms(CHARACTER_PREVIEW_TIME);
+			LCD_SetPos(2,12+Cpass);
+     1f4:	60 91 c9 02 	lds	r22, 0x02C9	; 0x8002c9 <Cpass>
+     1f8:	64 5f       	subi	r22, 0xF4	; 244
+     1fa:	82 e0       	ldi	r24, 0x02	; 2
+     1fc:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+			LCD_Char(PASSWORD_SYMBOL);
+     200:	8a e2       	ldi	r24, 0x2A	; 42
+     202:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     206:	2f ef       	ldi	r18, 0xFF	; 255
+     208:	81 ee       	ldi	r24, 0xE1	; 225
+     20a:	94 e0       	ldi	r25, 0x04	; 4
+     20c:	21 50       	subi	r18, 0x01	; 1
+     20e:	80 40       	sbci	r24, 0x00	; 0
+     210:	90 40       	sbci	r25, 0x00	; 0
+     212:	e1 f7       	brne	.-8      	; 0x20c <APP_First_start+0xba>
+     214:	00 c0       	rjmp	.+0      	; 0x216 <APP_First_start+0xc4>
+     216:	00 00       	nop
+			_delay_ms(100);
+			Cpass++;
+     218:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     21c:	8f 5f       	subi	r24, 0xFF	; 255
+     21e:	80 93 c9 02 	sts	0x02C9, r24	; 0x8002c9 <Cpass>
+		LCD_SetPos(2,0);
+		LCD_String("Admin pass: ");
+	
+	//*********************SET ADMIN PASSWORD *****************************
+
+		while(Cpass < PASS_SIZE){
+     222:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     226:	84 30       	cpi	r24, 0x04	; 4
+     228:	48 f2       	brcs	.-110    	; 0x1bc <APP_First_start+0x6a>
+			LCD_SetPos(2,12+Cpass);
+			LCD_Char(PASSWORD_SYMBOL);
+			_delay_ms(100);
+			Cpass++;
+		}
+		EEPROM_WriteBlock(EEPROM_ADMIN_ADDRESS, password, PASS_SIZE);
+     22a:	44 e0       	ldi	r20, 0x04	; 4
+     22c:	50 e0       	ldi	r21, 0x00	; 0
+     22e:	6d ec       	ldi	r22, 0xCD	; 205
+     230:	72 e0       	ldi	r23, 0x02	; 2
+     232:	82 e0       	ldi	r24, 0x02	; 2
+     234:	91 e0       	ldi	r25, 0x01	; 1
+     236:	0e 94 3e 07 	call	0xe7c	; 0xe7c <EEPROM_WriteBlock>
+		EEPROM_WriteByte(ADMIN_PASS_STATUS_ADDRESS, PASS_SET);
+     23a:	61 e0       	ldi	r22, 0x01	; 1
+     23c:	80 e0       	ldi	r24, 0x00	; 0
+     23e:	91 e0       	ldi	r25, 0x01	; 1
+     240:	0e 94 2c 07 	call	0xe58	; 0xe58 <EEPROM_WriteByte>
+		LCD_Clear();
+     244:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+		LCD_SetPos(1,0);
+     248:	60 e0       	ldi	r22, 0x00	; 0
+     24a:	81 e0       	ldi	r24, 0x01	; 1
+     24c:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("Password saved");
+     250:	8f ef       	ldi	r24, 0xFF	; 255
+     252:	90 e0       	ldi	r25, 0x00	; 0
+     254:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     258:	2f ef       	ldi	r18, 0xFF	; 255
+     25a:	89 e6       	ldi	r24, 0x69	; 105
+     25c:	98 e1       	ldi	r25, 0x18	; 24
+     25e:	21 50       	subi	r18, 0x01	; 1
+     260:	80 40       	sbci	r24, 0x00	; 0
+     262:	90 40       	sbci	r25, 0x00	; 0
+     264:	e1 f7       	brne	.-8      	; 0x25e <APP_First_start+0x10c>
+     266:	00 c0       	rjmp	.+0      	; 0x268 <APP_First_start+0x116>
+     268:	00 00       	nop
+		_delay_ms(500);
+		LCD_Clear();
+     26a:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+	//************************* END ****************************************
+		
+	//*********************SET GUEST PASSWORD *****************************
+		LCD_SetPos(1,0);
+     26e:	60 e0       	ldi	r22, 0x00	; 0
+     270:	81 e0       	ldi	r24, 0x01	; 1
+     272:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("Set Guest pass");
+     276:	8e e0       	ldi	r24, 0x0E	; 14
+     278:	91 e0       	ldi	r25, 0x01	; 1
+     27a:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+		LCD_SetPos(2,0);
+     27e:	60 e0       	ldi	r22, 0x00	; 0
+     280:	82 e0       	ldi	r24, 0x02	; 2
+     282:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("Guest pass: ");
+     286:	8d e1       	ldi	r24, 0x1D	; 29
+     288:	91 e0       	ldi	r25, 0x01	; 1
+     28a:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+		Cpass = 0;
+     28e:	10 92 c9 02 	sts	0x02C9, r1	; 0x8002c9 <Cpass>
+		
+		while(Cpass < PASS_SIZE){
+     292:	33 c0       	rjmp	.+102    	; 0x2fa <APP_First_start+0x1a8>
+			key_pressed = NOT_PRESSED;
+     294:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     298:	04 c0       	rjmp	.+8      	; 0x2a2 <APP_First_start+0x150>
+			{
+				key_pressed = GetKeyPress();//if the user pressed any button in keypad save the value in key_pressed
+     29a:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     29e:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+		LCD_String("Guest pass: ");
+		Cpass = 0;
+		
+		while(Cpass < PASS_SIZE){
+			key_pressed = NOT_PRESSED;
+			while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     2a2:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     2a6:	88 23       	and	r24, r24
+     2a8:	c1 f3       	breq	.-16     	; 0x29a <APP_First_start+0x148>
+			{
+				key_pressed = GetKeyPress();//if the user pressed any button in keypad save the value in key_pressed
+				//itoa(key_pressed,password,10);
+			}
+			password[Cpass] = key_pressed;
+     2aa:	e0 91 c9 02 	lds	r30, 0x02C9	; 0x8002c9 <Cpass>
+     2ae:	f0 e0       	ldi	r31, 0x00	; 0
+     2b0:	e3 53       	subi	r30, 0x33	; 51
+     2b2:	fd 4f       	sbci	r31, 0xFD	; 253
+     2b4:	80 83       	st	Z, r24
+			LCD_Char(key_pressed);
+     2b6:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     2ba:	2f ef       	ldi	r18, 0xFF	; 255
+     2bc:	85 ea       	ldi	r24, 0xA5	; 165
+     2be:	9e e0       	ldi	r25, 0x0E	; 14
+     2c0:	21 50       	subi	r18, 0x01	; 1
+     2c2:	80 40       	sbci	r24, 0x00	; 0
+     2c4:	90 40       	sbci	r25, 0x00	; 0
+     2c6:	e1 f7       	brne	.-8      	; 0x2c0 <APP_First_start+0x16e>
+     2c8:	00 c0       	rjmp	.+0      	; 0x2ca <APP_First_start+0x178>
+     2ca:	00 00       	nop
+			_delay_ms(CHARACTER_PREVIEW_TIME);
+			LCD_SetPos(2,12+Cpass);
+     2cc:	60 91 c9 02 	lds	r22, 0x02C9	; 0x8002c9 <Cpass>
+     2d0:	64 5f       	subi	r22, 0xF4	; 244
+     2d2:	82 e0       	ldi	r24, 0x02	; 2
+     2d4:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+			LCD_Char(PASSWORD_SYMBOL);
+     2d8:	8a e2       	ldi	r24, 0x2A	; 42
+     2da:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     2de:	2f ef       	ldi	r18, 0xFF	; 255
+     2e0:	81 ee       	ldi	r24, 0xE1	; 225
+     2e2:	94 e0       	ldi	r25, 0x04	; 4
+     2e4:	21 50       	subi	r18, 0x01	; 1
+     2e6:	80 40       	sbci	r24, 0x00	; 0
+     2e8:	90 40       	sbci	r25, 0x00	; 0
+     2ea:	e1 f7       	brne	.-8      	; 0x2e4 <APP_First_start+0x192>
+     2ec:	00 c0       	rjmp	.+0      	; 0x2ee <APP_First_start+0x19c>
+     2ee:	00 00       	nop
+			_delay_ms(100);
+			Cpass++;
+     2f0:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     2f4:	8f 5f       	subi	r24, 0xFF	; 255
+     2f6:	80 93 c9 02 	sts	0x02C9, r24	; 0x8002c9 <Cpass>
+		LCD_String("Set Guest pass");
+		LCD_SetPos(2,0);
+		LCD_String("Guest pass: ");
+		Cpass = 0;
+		
+		while(Cpass < PASS_SIZE){
+     2fa:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     2fe:	84 30       	cpi	r24, 0x04	; 4
+     300:	48 f2       	brcs	.-110    	; 0x294 <APP_First_start+0x142>
+			LCD_SetPos(2,12+Cpass);
+			LCD_Char(PASSWORD_SYMBOL);
+			_delay_ms(100);
+			Cpass++;
+		}
+		EEPROM_WriteBlock(EEPROM_GUEST_ADDRESS, password, PASS_SIZE);
+     302:	44 e0       	ldi	r20, 0x04	; 4
+     304:	50 e0       	ldi	r21, 0x00	; 0
+     306:	6d ec       	ldi	r22, 0xCD	; 205
+     308:	72 e0       	ldi	r23, 0x02	; 2
+     30a:	86 e0       	ldi	r24, 0x06	; 6
+     30c:	91 e0       	ldi	r25, 0x01	; 1
+     30e:	0e 94 3e 07 	call	0xe7c	; 0xe7c <EEPROM_WriteBlock>
+		EEPROM_WriteByte(GUEST_PASS_STATUS_ADDRESS, PASS_SET);
+     312:	61 e0       	ldi	r22, 0x01	; 1
+     314:	81 e0       	ldi	r24, 0x01	; 1
+     316:	91 e0       	ldi	r25, 0x01	; 1
+     318:	0e 94 2c 07 	call	0xe58	; 0xe58 <EEPROM_WriteByte>
+		LCD_Clear();
+     31c:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+		LCD_SetPos(1,0);
+     320:	60 e0       	ldi	r22, 0x00	; 0
+     322:	81 e0       	ldi	r24, 0x01	; 1
+     324:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+		LCD_String("Password saved");
+     328:	8f ef       	ldi	r24, 0xFF	; 255
+     32a:	90 e0       	ldi	r25, 0x00	; 0
+     32c:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     330:	2f ef       	ldi	r18, 0xFF	; 255
+     332:	89 e6       	ldi	r24, 0x69	; 105
+     334:	98 e1       	ldi	r25, 0x18	; 24
+     336:	21 50       	subi	r18, 0x01	; 1
+     338:	80 40       	sbci	r24, 0x00	; 0
+     33a:	90 40       	sbci	r25, 0x00	; 0
+     33c:	e1 f7       	brne	.-8      	; 0x336 <APP_First_start+0x1e4>
+     33e:	00 c0       	rjmp	.+0      	; 0x340 <APP_First_start+0x1ee>
+     340:	00 00       	nop
+		_delay_ms(500);
+		LCD_Clear();
+     342:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+		Cpass = 0;
+     346:	10 92 c9 02 	sts	0x02C9, r1	; 0x8002c9 <Cpass>
+     34a:	08 95       	ret
+
+0000034c <APP_Start_login>:
+	}
+	//***************************************** END *****************************************************
+}
+void APP_Start_login(void){
+     34c:	1f 93       	push	r17
+     34e:	cf 93       	push	r28
+     350:	df 93       	push	r29
+     352:	00 d0       	rcall	.+0      	; 0x354 <APP_Start_login+0x8>
+     354:	00 d0       	rcall	.+0      	; 0x356 <APP_Start_login+0xa>
+     356:	1f 92       	push	r1
+     358:	cd b7       	in	r28, 0x3d	; 61
+     35a:	de b7       	in	r29, 0x3e	; 62
+	//************************** LOGIN SYSTEM *********************************
+	
+		Cpass = 0;	//Counter
+     35c:	10 92 c9 02 	sts	0x02C9, r1	; 0x8002c9 <Cpass>
+		key_pressed = NOT_PRESSED;
+     360:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+		Uint8 Stored_pass[PASS_SIZE];	//Array to store the password (Will be used to compare the entered password)
+		Uint8 Tries = 0;	//set the number of tries (max = 3)
+     364:	10 e0       	ldi	r17, 0x00	; 0
+		Uint8 attempt[1];
+		
+		while(login_mode == NO_MODE){
+     366:	61 c2       	rjmp	.+1218   	; 0x82a <__DATA_REGION_LENGTH__+0x2a>
+			
+			/* Bluetooth Trasmit */
+			
+			Bluetooth_TransmitString("Admin mode");
+     368:	8a e2       	ldi	r24, 0x2A	; 42
+     36a:	91 e0       	ldi	r25, 0x01	; 1
+     36c:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			Bluetooth_New_line();
+     370:	0e 94 81 07 	call	0xf02	; 0xf02 <Bluetooth_New_line>
+			Bluetooth_TransmitString("Enter Password: ");
+     374:	85 e3       	ldi	r24, 0x35	; 53
+     376:	91 e0       	ldi	r25, 0x01	; 1
+     378:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			
+			/* ************************************ */
+		
+			LCD_Clear();
+     37c:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+			LCD_String("Select Mode: ");
+     380:	86 e4       	ldi	r24, 0x46	; 70
+     382:	91 e0       	ldi	r25, 0x01	; 1
+     384:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+			LCD_SetPos(2,0);
+     388:	60 e0       	ldi	r22, 0x00	; 0
+     38a:	82 e0       	ldi	r24, 0x02	; 2
+     38c:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+			LCD_String("0:Admin 1:Guest");
+     390:	84 e5       	ldi	r24, 0x54	; 84
+     392:	91 e0       	ldi	r25, 0x01	; 1
+     394:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+
+			while(key_pressed == NOT_PRESSED)//wait for the selection of the mode
+     398:	5f c0       	rjmp	.+190    	; 0x458 <__EEPROM_REGION_LENGTH__+0x58>
+			{
+				key_pressed = GetKeyPress();
+     39a:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     39e:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+				
+				// if Bluetooth is connected and message is sent 
+				if(rData != NOT_PRESSED){
+     3a2:	80 91 c8 02 	lds	r24, 0x02C8	; 0x8002c8 <rData>
+     3a6:	88 23       	and	r24, r24
+     3a8:	09 f4       	brne	.+2      	; 0x3ac <APP_Start_login+0x60>
+     3aa:	56 c0       	rjmp	.+172    	; 0x458 <__EEPROM_REGION_LENGTH__+0x58>
+					if(Bluetooth_login == NO_MODE){
+     3ac:	90 91 c6 02 	lds	r25, 0x02C6	; 0x8002c6 <__data_end>
+     3b0:	91 11       	cpse	r25, r1
+     3b2:	52 c0       	rjmp	.+164    	; 0x458 <__EEPROM_REGION_LENGTH__+0x58>
+						
+						if((BT_sv_cnt < PASS_SIZE)){
+     3b4:	e0 91 c7 02 	lds	r30, 0x02C7	; 0x8002c7 <BT_sv_cnt>
+     3b8:	e4 30       	cpi	r30, 0x04	; 4
+     3ba:	b8 f4       	brcc	.+46     	; 0x3ea <APP_Start_login+0x9e>
+							
+							Pass_check[BT_sv_cnt] = rData;
+     3bc:	f0 e0       	ldi	r31, 0x00	; 0
+     3be:	eb 52       	subi	r30, 0x2B	; 43
+     3c0:	fd 4f       	sbci	r31, 0xFD	; 253
+     3c2:	80 83       	st	Z, r24
+							LCD_SetPos(2,15);
+     3c4:	6f e0       	ldi	r22, 0x0F	; 15
+     3c6:	82 e0       	ldi	r24, 0x02	; 2
+     3c8:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_String(" ");
+     3cc:	89 e3       	ldi	r24, 0x39	; 57
+     3ce:	92 e0       	ldi	r25, 0x02	; 2
+     3d0:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+							LCD_String(Pass_check);
+     3d4:	85 ed       	ldi	r24, 0xD5	; 213
+     3d6:	92 e0       	ldi	r25, 0x02	; 2
+     3d8:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+							BT_sv_cnt++;
+     3dc:	80 91 c7 02 	lds	r24, 0x02C7	; 0x8002c7 <BT_sv_cnt>
+     3e0:	8f 5f       	subi	r24, 0xFF	; 255
+     3e2:	80 93 c7 02 	sts	0x02C7, r24	; 0x8002c7 <BT_sv_cnt>
+							rData = NOT_PRESSED;
+     3e6:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+						}
+						if(BT_sv_cnt == 4){
+     3ea:	80 91 c7 02 	lds	r24, 0x02C7	; 0x8002c7 <BT_sv_cnt>
+     3ee:	84 30       	cpi	r24, 0x04	; 4
+     3f0:	99 f5       	brne	.+102    	; 0x458 <__EEPROM_REGION_LENGTH__+0x58>
+
+							EEPROM_ReadBlock(EEPROM_ADMIN_ADDRESS,bluetooth_pass_check,PASS_SIZE);
+     3f2:	44 e0       	ldi	r20, 0x04	; 4
+     3f4:	50 e0       	ldi	r21, 0x00	; 0
+     3f6:	61 ed       	ldi	r22, 0xD1	; 209
+     3f8:	72 e0       	ldi	r23, 0x02	; 2
+     3fa:	82 e0       	ldi	r24, 0x02	; 2
+     3fc:	91 e0       	ldi	r25, 0x01	; 1
+     3fe:	0e 94 13 07 	call	0xe26	; 0xe26 <EEPROM_ReadBlock>
+							
+							if(Pass_Compare(Pass_check,bluetooth_pass_check, PASS_SIZE) == TRUE){
+     402:	44 e0       	ldi	r20, 0x04	; 4
+     404:	61 ed       	ldi	r22, 0xD1	; 209
+     406:	72 e0       	ldi	r23, 0x02	; 2
+     408:	85 ed       	ldi	r24, 0xD5	; 213
+     40a:	92 e0       	ldi	r25, 0x02	; 2
+     40c:	0e 94 65 07 	call	0xeca	; 0xeca <Pass_Compare>
+     410:	81 30       	cpi	r24, 0x01	; 1
+     412:	e1 f4       	brne	.+56     	; 0x44c <__EEPROM_REGION_LENGTH__+0x4c>
+								Bluetooth_TransmitString("Logged in");
+     414:	84 e6       	ldi	r24, 0x64	; 100
+     416:	91 e0       	ldi	r25, 0x01	; 1
+     418:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+								Bluetooth_New_line();
+     41c:	0e 94 81 07 	call	0xf02	; 0xf02 <Bluetooth_New_line>
+								Bluetooth_login = ADMIN_MODE;
+     420:	81 e0       	ldi	r24, 0x01	; 1
+     422:	80 93 c6 02 	sts	0x02C6, r24	; 0x8002c6 <__data_end>
+								LED_TurnOn(Bluetooth_LED_PORT);
+     426:	82 e1       	ldi	r24, 0x12	; 18
+     428:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+     42c:	2f ef       	ldi	r18, 0xFF	; 255
+     42e:	83 ec       	ldi	r24, 0xC3	; 195
+     430:	99 e0       	ldi	r25, 0x09	; 9
+     432:	21 50       	subi	r18, 0x01	; 1
+     434:	80 40       	sbci	r24, 0x00	; 0
+     436:	90 40       	sbci	r25, 0x00	; 0
+     438:	e1 f7       	brne	.-8      	; 0x432 <__EEPROM_REGION_LENGTH__+0x32>
+     43a:	00 c0       	rjmp	.+0      	; 0x43c <__EEPROM_REGION_LENGTH__+0x3c>
+     43c:	00 00       	nop
+								_delay_ms(200);
+								Bluetooth_T_Admin_menu();
+     43e:	0e 94 84 07 	call	0xf08	; 0xf08 <Bluetooth_T_Admin_menu>
+								BT_sv_cnt =0;
+     442:	10 92 c7 02 	sts	0x02C7, r1	; 0x8002c7 <BT_sv_cnt>
+								rData = NOT_PRESSED;
+     446:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+     44a:	06 c0       	rjmp	.+12     	; 0x458 <__EEPROM_REGION_LENGTH__+0x58>
+							}
+							else{
+								Bluetooth_TransmitString("Wrong Password");
+     44c:	8e e6       	ldi	r24, 0x6E	; 110
+     44e:	91 e0       	ldi	r25, 0x01	; 1
+     450:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+								BT_sv_cnt =0;
+     454:	10 92 c7 02 	sts	0x02C7, r1	; 0x8002c7 <BT_sv_cnt>
+			LCD_Clear();
+			LCD_String("Select Mode: ");
+			LCD_SetPos(2,0);
+			LCD_String("0:Admin 1:Guest");
+
+			while(key_pressed == NOT_PRESSED)//wait for the selection of the mode
+     458:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     45c:	88 23       	and	r24, r24
+     45e:	09 f4       	brne	.+2      	; 0x462 <__EEPROM_REGION_LENGTH__+0x62>
+     460:	9c cf       	rjmp	.-200    	; 0x39a <APP_Start_login+0x4e>
+						}
+					}
+				}
+			}
+		/* ****************** Check the mode and password entered *********************** */
+			switch(key_pressed){
+     462:	80 33       	cpi	r24, 0x30	; 48
+     464:	09 f4       	brne	.+2      	; 0x468 <__EEPROM_REGION_LENGTH__+0x68>
+     466:	e0 c0       	rjmp	.+448    	; 0x628 <__EEPROM_REGION_LENGTH__+0x228>
+     468:	81 33       	cpi	r24, 0x31	; 49
+     46a:	09 f4       	brne	.+2      	; 0x46e <__EEPROM_REGION_LENGTH__+0x6e>
+     46c:	bf c1       	rjmp	.+894    	; 0x7ec <__EEPROM_REGION_LENGTH__+0x3ec>
+     46e:	c4 c1       	rjmp	.+904    	; 0x7f8 <__EEPROM_REGION_LENGTH__+0x3f8>
+				case CHECK_ADMIN_MODE:
+					while(login_mode != ADMIN_MODE){
+						LCD_Clear();
+     470:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+						key_pressed = NOT_PRESSED;
+     474:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+						LCD_String("Admin Mode");
+     478:	8d e7       	ldi	r24, 0x7D	; 125
+     47a:	91 e0       	ldi	r25, 0x01	; 1
+     47c:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+						LCD_SetPos(2,0);
+     480:	60 e0       	ldi	r22, 0x00	; 0
+     482:	82 e0       	ldi	r24, 0x02	; 2
+     484:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+						LCD_String("Enter Pass: ");
+     488:	88 e8       	ldi	r24, 0x88	; 136
+     48a:	91 e0       	ldi	r25, 0x01	; 1
+     48c:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     490:	2f ef       	ldi	r18, 0xFF	; 255
+     492:	81 ee       	ldi	r24, 0xE1	; 225
+     494:	94 e0       	ldi	r25, 0x04	; 4
+     496:	21 50       	subi	r18, 0x01	; 1
+     498:	80 40       	sbci	r24, 0x00	; 0
+     49a:	90 40       	sbci	r25, 0x00	; 0
+     49c:	e1 f7       	brne	.-8      	; 0x496 <__EEPROM_REGION_LENGTH__+0x96>
+     49e:	00 c0       	rjmp	.+0      	; 0x4a0 <__EEPROM_REGION_LENGTH__+0xa0>
+     4a0:	00 00       	nop
+     4a2:	32 c0       	rjmp	.+100    	; 0x508 <__EEPROM_REGION_LENGTH__+0x108>
+						_delay_ms(100);
+
+						while(Cpass < PASS_SIZE){
+							while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+							{
+								key_pressed = GetKeyPress();
+     4a4:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     4a8:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+						LCD_SetPos(2,0);
+						LCD_String("Enter Pass: ");
+						_delay_ms(100);
+
+						while(Cpass < PASS_SIZE){
+							while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     4ac:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     4b0:	88 23       	and	r24, r24
+     4b2:	c1 f3       	breq	.-16     	; 0x4a4 <__EEPROM_REGION_LENGTH__+0xa4>
+							{
+								key_pressed = GetKeyPress();
+							}
+							password[Cpass] = key_pressed;
+     4b4:	e0 91 c9 02 	lds	r30, 0x02C9	; 0x8002c9 <Cpass>
+     4b8:	f0 e0       	ldi	r31, 0x00	; 0
+     4ba:	e3 53       	subi	r30, 0x33	; 51
+     4bc:	fd 4f       	sbci	r31, 0xFD	; 253
+     4be:	80 83       	st	Z, r24
+							LCD_Char(key_pressed);
+     4c0:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     4c4:	2f ef       	ldi	r18, 0xFF	; 255
+     4c6:	85 ea       	ldi	r24, 0xA5	; 165
+     4c8:	9e e0       	ldi	r25, 0x0E	; 14
+     4ca:	21 50       	subi	r18, 0x01	; 1
+     4cc:	80 40       	sbci	r24, 0x00	; 0
+     4ce:	90 40       	sbci	r25, 0x00	; 0
+     4d0:	e1 f7       	brne	.-8      	; 0x4ca <__EEPROM_REGION_LENGTH__+0xca>
+     4d2:	00 c0       	rjmp	.+0      	; 0x4d4 <__EEPROM_REGION_LENGTH__+0xd4>
+     4d4:	00 00       	nop
+							_delay_ms(CHARACTER_PREVIEW_TIME);
+							LCD_SetPos(2,12+Cpass);
+     4d6:	60 91 c9 02 	lds	r22, 0x02C9	; 0x8002c9 <Cpass>
+     4da:	64 5f       	subi	r22, 0xF4	; 244
+     4dc:	82 e0       	ldi	r24, 0x02	; 2
+     4de:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_Char(PASSWORD_SYMBOL);
+     4e2:	8a e2       	ldi	r24, 0x2A	; 42
+     4e4:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     4e8:	2f ef       	ldi	r18, 0xFF	; 255
+     4ea:	81 ee       	ldi	r24, 0xE1	; 225
+     4ec:	94 e0       	ldi	r25, 0x04	; 4
+     4ee:	21 50       	subi	r18, 0x01	; 1
+     4f0:	80 40       	sbci	r24, 0x00	; 0
+     4f2:	90 40       	sbci	r25, 0x00	; 0
+     4f4:	e1 f7       	brne	.-8      	; 0x4ee <__EEPROM_REGION_LENGTH__+0xee>
+     4f6:	00 c0       	rjmp	.+0      	; 0x4f8 <__EEPROM_REGION_LENGTH__+0xf8>
+     4f8:	00 00       	nop
+							_delay_ms(100);
+							Cpass++;
+     4fa:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     4fe:	8f 5f       	subi	r24, 0xFF	; 255
+     500:	80 93 c9 02 	sts	0x02C9, r24	; 0x8002c9 <Cpass>
+							key_pressed = NOT_PRESSED;
+     504:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+						LCD_String("Admin Mode");
+						LCD_SetPos(2,0);
+						LCD_String("Enter Pass: ");
+						_delay_ms(100);
+
+						while(Cpass < PASS_SIZE){
+     508:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     50c:	84 30       	cpi	r24, 0x04	; 4
+     50e:	70 f2       	brcs	.-100    	; 0x4ac <__EEPROM_REGION_LENGTH__+0xac>
+							LCD_Char(PASSWORD_SYMBOL);
+							_delay_ms(100);
+							Cpass++;
+							key_pressed = NOT_PRESSED;
+						}
+						Cpass = 0; // Re-initialize The counter to zero
+     510:	10 92 c9 02 	sts	0x02C9, r1	; 0x8002c9 <Cpass>
+
+						EEPROM_ReadBlock(EEPROM_ADMIN_ADDRESS,Stored_pass,PASS_SIZE);	//Store the password in the EEPROM on the array to used in comparing
+     514:	44 e0       	ldi	r20, 0x04	; 4
+     516:	50 e0       	ldi	r21, 0x00	; 0
+     518:	be 01       	movw	r22, r28
+     51a:	6f 5f       	subi	r22, 0xFF	; 255
+     51c:	7f 4f       	sbci	r23, 0xFF	; 255
+     51e:	82 e0       	ldi	r24, 0x02	; 2
+     520:	91 e0       	ldi	r25, 0x01	; 1
+     522:	0e 94 13 07 	call	0xe26	; 0xe26 <EEPROM_ReadBlock>
+	
+	// ***************************** COMPARE PASSWORDS *****************************
+
+						if(Pass_Compare(password,Stored_pass, PASS_SIZE) == TRUE){
+     526:	44 e0       	ldi	r20, 0x04	; 4
+     528:	be 01       	movw	r22, r28
+     52a:	6f 5f       	subi	r22, 0xFF	; 255
+     52c:	7f 4f       	sbci	r23, 0xFF	; 255
+     52e:	8d ec       	ldi	r24, 0xCD	; 205
+     530:	92 e0       	ldi	r25, 0x02	; 2
+     532:	0e 94 65 07 	call	0xeca	; 0xeca <Pass_Compare>
+     536:	81 30       	cpi	r24, 0x01	; 1
+     538:	49 f5       	brne	.+82     	; 0x58c <__EEPROM_REGION_LENGTH__+0x18c>
+							LCD_Clear();
+     53a:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							login_mode = ADMIN_MODE;
+     53e:	81 e0       	ldi	r24, 0x01	; 1
+     540:	80 93 cb 02 	sts	0x02CB, r24	; 0x8002cb <login_mode>
+							Tries = 0;
+							LCD_Clear();
+     544:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							LCD_String("Authorized");
+     548:	85 e9       	ldi	r24, 0x95	; 149
+     54a:	91 e0       	ldi	r25, 0x01	; 1
+     54c:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+							LCD_SetPos(2,4);
+     550:	64 e0       	ldi	r22, 0x04	; 4
+     552:	82 e0       	ldi	r24, 0x02	; 2
+     554:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_String("Enjoy");
+     558:	80 ea       	ldi	r24, 0xA0	; 160
+     55a:	91 e0       	ldi	r25, 0x01	; 1
+     55c:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     560:	2f ef       	ldi	r18, 0xFF	; 255
+     562:	89 e6       	ldi	r24, 0x69	; 105
+     564:	98 e1       	ldi	r25, 0x18	; 24
+     566:	21 50       	subi	r18, 0x01	; 1
+     568:	80 40       	sbci	r24, 0x00	; 0
+     56a:	90 40       	sbci	r25, 0x00	; 0
+     56c:	e1 f7       	brne	.-8      	; 0x566 <__EEPROM_REGION_LENGTH__+0x166>
+     56e:	00 c0       	rjmp	.+0      	; 0x570 <__EEPROM_REGION_LENGTH__+0x170>
+     570:	00 00       	nop
+							_delay_ms(500);	
+							LED_TurnOn(ADMIN_LED_PORT);
+     572:	85 e1       	ldi	r24, 0x15	; 21
+     574:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+							LED_TurnOff(NO_MODE_PORT);
+     578:	87 e1       	ldi	r24, 0x17	; 23
+     57a:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+							LED_TurnOff(GUEST_LED_PORT);
+     57e:	86 e1       	ldi	r24, 0x16	; 22
+     580:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+							LCD_Clear();
+     584:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+	// ***************************** COMPARE PASSWORDS *****************************
+
+						if(Pass_Compare(password,Stored_pass, PASS_SIZE) == TRUE){
+							LCD_Clear();
+							login_mode = ADMIN_MODE;
+							Tries = 0;
+     588:	10 e0       	ldi	r17, 0x00	; 0
+     58a:	4e c0       	rjmp	.+156    	; 0x628 <__EEPROM_REGION_LENGTH__+0x228>
+							LED_TurnOff(NO_MODE_PORT);
+							LED_TurnOff(GUEST_LED_PORT);
+							LCD_Clear();
+						}
+						else{
+							LCD_Clear();
+     58c:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							Tries++;
+     590:	1f 5f       	subi	r17, 0xFF	; 255
+							login_mode = NO_MODE;
+     592:	10 92 cb 02 	sts	0x02CB, r1	; 0x8002cb <login_mode>
+							LCD_String("Wrong Password");
+     596:	8e e6       	ldi	r24, 0x6E	; 110
+     598:	91 e0       	ldi	r25, 0x01	; 1
+     59a:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+							LCD_SetPos(2,0);
+     59e:	60 e0       	ldi	r22, 0x00	; 0
+     5a0:	82 e0       	ldi	r24, 0x02	; 2
+     5a2:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_String("Attempts: ");
+     5a6:	86 ea       	ldi	r24, 0xA6	; 166
+     5a8:	91 e0       	ldi	r25, 0x01	; 1
+     5aa:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+    } else if (__radix < 2 || __radix > 36) {
+	*__s = 0;
+	return __s;
+    } else {
+	extern char *__itoa_ncheck (int, char *, unsigned char);
+	return __itoa_ncheck (__val, __s, __radix);
+     5ae:	4a e0       	ldi	r20, 0x0A	; 10
+     5b0:	be 01       	movw	r22, r28
+     5b2:	6b 5f       	subi	r22, 0xFB	; 251
+     5b4:	7f 4f       	sbci	r23, 0xFF	; 255
+     5b6:	81 2f       	mov	r24, r17
+     5b8:	90 e0       	ldi	r25, 0x00	; 0
+     5ba:	0e 94 22 0b 	call	0x1644	; 0x1644 <__itoa_ncheck>
+							LCD_String(itoa(Tries,attempt,10));
+     5be:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     5c2:	2f ef       	ldi	r18, 0xFF	; 255
+     5c4:	89 e6       	ldi	r24, 0x69	; 105
+     5c6:	98 e1       	ldi	r25, 0x18	; 24
+     5c8:	21 50       	subi	r18, 0x01	; 1
+     5ca:	80 40       	sbci	r24, 0x00	; 0
+     5cc:	90 40       	sbci	r25, 0x00	; 0
+     5ce:	e1 f7       	brne	.-8      	; 0x5c8 <__EEPROM_REGION_LENGTH__+0x1c8>
+     5d0:	00 c0       	rjmp	.+0      	; 0x5d2 <__EEPROM_REGION_LENGTH__+0x1d2>
+     5d2:	00 00       	nop
+							_delay_ms(500);
+							LCD_Clear();
+     5d4:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							//key_pressed = CHECK_ADMIN_MODE;
+							if(Tries >= TRIES_ALLOWED){
+     5d8:	13 30       	cpi	r17, 0x03	; 3
+     5da:	08 f5       	brcc	.+66     	; 0x61e <__EEPROM_REGION_LENGTH__+0x21e>
+     5dc:	25 c0       	rjmp	.+74     	; 0x628 <__EEPROM_REGION_LENGTH__+0x228>
+								while(key_pressed != '/'){
+									while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+									{
+										key_pressed = GetKeyPress();
+     5de:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     5e2:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+										Buz_TurnOn(Buzzer);
+     5e6:	84 e1       	ldi	r24, 0x14	; 20
+     5e8:	0e 94 02 07 	call	0xe04	; 0xe04 <Buz_TurnOn>
+     5ec:	2f ef       	ldi	r18, 0xFF	; 255
+     5ee:	89 ef       	ldi	r24, 0xF9	; 249
+     5f0:	90 e0       	ldi	r25, 0x00	; 0
+     5f2:	21 50       	subi	r18, 0x01	; 1
+     5f4:	80 40       	sbci	r24, 0x00	; 0
+     5f6:	90 40       	sbci	r25, 0x00	; 0
+     5f8:	e1 f7       	brne	.-8      	; 0x5f2 <__EEPROM_REGION_LENGTH__+0x1f2>
+     5fa:	00 c0       	rjmp	.+0      	; 0x5fc <__EEPROM_REGION_LENGTH__+0x1fc>
+     5fc:	00 00       	nop
+										_delay_ms(20);
+										Buz_TurnOff(Buzzer);
+     5fe:	84 e1       	ldi	r24, 0x14	; 20
+     600:	0e 94 06 07 	call	0xe0c	; 0xe0c <Buz_TurnOff>
+     604:	2f ef       	ldi	r18, 0xFF	; 255
+     606:	89 ef       	ldi	r24, 0xF9	; 249
+     608:	90 e0       	ldi	r25, 0x00	; 0
+     60a:	21 50       	subi	r18, 0x01	; 1
+     60c:	80 40       	sbci	r24, 0x00	; 0
+     60e:	90 40       	sbci	r25, 0x00	; 0
+     610:	e1 f7       	brne	.-8      	; 0x60a <__EEPROM_REGION_LENGTH__+0x20a>
+     612:	00 c0       	rjmp	.+0      	; 0x614 <__EEPROM_REGION_LENGTH__+0x214>
+     614:	00 00       	nop
+							_delay_ms(500);
+							LCD_Clear();
+							//key_pressed = CHECK_ADMIN_MODE;
+							if(Tries >= TRIES_ALLOWED){
+								while(key_pressed != '/'){
+									while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     616:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     61a:	88 23       	and	r24, r24
+     61c:	01 f3       	breq	.-64     	; 0x5de <__EEPROM_REGION_LENGTH__+0x1de>
+							LCD_String(itoa(Tries,attempt,10));
+							_delay_ms(500);
+							LCD_Clear();
+							//key_pressed = CHECK_ADMIN_MODE;
+							if(Tries >= TRIES_ALLOWED){
+								while(key_pressed != '/'){
+     61e:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     622:	8f 32       	cpi	r24, 0x2F	; 47
+     624:	c1 f7       	brne	.-16     	; 0x616 <__EEPROM_REGION_LENGTH__+0x216>
+										_delay_ms(20);
+									}
+									
+								}
+								
+								Tries = 0;
+     626:	10 e0       	ldi	r17, 0x00	; 0
+				}
+			}
+		/* ****************** Check the mode and password entered *********************** */
+			switch(key_pressed){
+				case CHECK_ADMIN_MODE:
+					while(login_mode != ADMIN_MODE){
+     628:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     62c:	81 30       	cpi	r24, 0x01	; 1
+     62e:	09 f0       	breq	.+2      	; 0x632 <__EEPROM_REGION_LENGTH__+0x232>
+     630:	1f cf       	rjmp	.-450    	; 0x470 <__EEPROM_REGION_LENGTH__+0x70>
+     632:	fb c0       	rjmp	.+502    	; 0x82a <__DATA_REGION_LENGTH__+0x2a>
+					
+			/* *************************** CHECK GUEST MODE ************************************** */
+			
+				case CHECK_GUEST_MODE:
+					while(login_mode != GUEST_MODE){
+						LCD_Clear();
+     634:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+						key_pressed = NOT_PRESSED;
+     638:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+						LCD_String("Guest Mode");
+     63c:	81 eb       	ldi	r24, 0xB1	; 177
+     63e:	91 e0       	ldi	r25, 0x01	; 1
+     640:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+						LCD_SetPos(2,0);
+     644:	60 e0       	ldi	r22, 0x00	; 0
+     646:	82 e0       	ldi	r24, 0x02	; 2
+     648:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+						LCD_String("Enter Pass: ");
+     64c:	88 e8       	ldi	r24, 0x88	; 136
+     64e:	91 e0       	ldi	r25, 0x01	; 1
+     650:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     654:	2f ef       	ldi	r18, 0xFF	; 255
+     656:	81 ee       	ldi	r24, 0xE1	; 225
+     658:	94 e0       	ldi	r25, 0x04	; 4
+     65a:	21 50       	subi	r18, 0x01	; 1
+     65c:	80 40       	sbci	r24, 0x00	; 0
+     65e:	90 40       	sbci	r25, 0x00	; 0
+     660:	e1 f7       	brne	.-8      	; 0x65a <__EEPROM_REGION_LENGTH__+0x25a>
+     662:	00 c0       	rjmp	.+0      	; 0x664 <__EEPROM_REGION_LENGTH__+0x264>
+     664:	00 00       	nop
+     666:	32 c0       	rjmp	.+100    	; 0x6cc <__EEPROM_REGION_LENGTH__+0x2cc>
+						_delay_ms(100);
+					
+						while(Cpass < PASS_SIZE){
+							while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+							{
+								key_pressed = GetKeyPress();
+     668:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     66c:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+						LCD_SetPos(2,0);
+						LCD_String("Enter Pass: ");
+						_delay_ms(100);
+					
+						while(Cpass < PASS_SIZE){
+							while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     670:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     674:	88 23       	and	r24, r24
+     676:	c1 f3       	breq	.-16     	; 0x668 <__EEPROM_REGION_LENGTH__+0x268>
+							{
+								key_pressed = GetKeyPress();
+							}
+							password[Cpass] = key_pressed;
+     678:	e0 91 c9 02 	lds	r30, 0x02C9	; 0x8002c9 <Cpass>
+     67c:	f0 e0       	ldi	r31, 0x00	; 0
+     67e:	e3 53       	subi	r30, 0x33	; 51
+     680:	fd 4f       	sbci	r31, 0xFD	; 253
+     682:	80 83       	st	Z, r24
+							LCD_Char(key_pressed);
+     684:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     688:	2f ef       	ldi	r18, 0xFF	; 255
+     68a:	85 ea       	ldi	r24, 0xA5	; 165
+     68c:	9e e0       	ldi	r25, 0x0E	; 14
+     68e:	21 50       	subi	r18, 0x01	; 1
+     690:	80 40       	sbci	r24, 0x00	; 0
+     692:	90 40       	sbci	r25, 0x00	; 0
+     694:	e1 f7       	brne	.-8      	; 0x68e <__EEPROM_REGION_LENGTH__+0x28e>
+     696:	00 c0       	rjmp	.+0      	; 0x698 <__EEPROM_REGION_LENGTH__+0x298>
+     698:	00 00       	nop
+							_delay_ms(CHARACTER_PREVIEW_TIME);
+							LCD_SetPos(2,12+Cpass);
+     69a:	60 91 c9 02 	lds	r22, 0x02C9	; 0x8002c9 <Cpass>
+     69e:	64 5f       	subi	r22, 0xF4	; 244
+     6a0:	82 e0       	ldi	r24, 0x02	; 2
+     6a2:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_Char(PASSWORD_SYMBOL);
+     6a6:	8a e2       	ldi	r24, 0x2A	; 42
+     6a8:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+     6ac:	2f ef       	ldi	r18, 0xFF	; 255
+     6ae:	81 ee       	ldi	r24, 0xE1	; 225
+     6b0:	94 e0       	ldi	r25, 0x04	; 4
+     6b2:	21 50       	subi	r18, 0x01	; 1
+     6b4:	80 40       	sbci	r24, 0x00	; 0
+     6b6:	90 40       	sbci	r25, 0x00	; 0
+     6b8:	e1 f7       	brne	.-8      	; 0x6b2 <__EEPROM_REGION_LENGTH__+0x2b2>
+     6ba:	00 c0       	rjmp	.+0      	; 0x6bc <__EEPROM_REGION_LENGTH__+0x2bc>
+     6bc:	00 00       	nop
+							_delay_ms(100);
+							Cpass++;
+     6be:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     6c2:	8f 5f       	subi	r24, 0xFF	; 255
+     6c4:	80 93 c9 02 	sts	0x02C9, r24	; 0x8002c9 <Cpass>
+							key_pressed = NOT_PRESSED;
+     6c8:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+						LCD_String("Guest Mode");
+						LCD_SetPos(2,0);
+						LCD_String("Enter Pass: ");
+						_delay_ms(100);
+					
+						while(Cpass < PASS_SIZE){
+     6cc:	80 91 c9 02 	lds	r24, 0x02C9	; 0x8002c9 <Cpass>
+     6d0:	84 30       	cpi	r24, 0x04	; 4
+     6d2:	70 f2       	brcs	.-100    	; 0x670 <__EEPROM_REGION_LENGTH__+0x270>
+							LCD_Char(PASSWORD_SYMBOL);
+							_delay_ms(100);
+							Cpass++;
+							key_pressed = NOT_PRESSED;
+						}
+						Cpass = 0; // Re-initialize The counter to zero
+     6d4:	10 92 c9 02 	sts	0x02C9, r1	; 0x8002c9 <Cpass>
+					
+						EEPROM_ReadBlock(EEPROM_GUEST_ADDRESS,Stored_pass,PASS_SIZE);	//Store the password in the EEPROM on the array to used in comparing
+     6d8:	44 e0       	ldi	r20, 0x04	; 4
+     6da:	50 e0       	ldi	r21, 0x00	; 0
+     6dc:	be 01       	movw	r22, r28
+     6de:	6f 5f       	subi	r22, 0xFF	; 255
+     6e0:	7f 4f       	sbci	r23, 0xFF	; 255
+     6e2:	86 e0       	ldi	r24, 0x06	; 6
+     6e4:	91 e0       	ldi	r25, 0x01	; 1
+     6e6:	0e 94 13 07 	call	0xe26	; 0xe26 <EEPROM_ReadBlock>
+						
+						// ***************************** COMPARE PASSWORDS *****************************
+						
+						if(Pass_Compare(password,Stored_pass, PASS_SIZE) == TRUE){
+     6ea:	44 e0       	ldi	r20, 0x04	; 4
+     6ec:	be 01       	movw	r22, r28
+     6ee:	6f 5f       	subi	r22, 0xFF	; 255
+     6f0:	7f 4f       	sbci	r23, 0xFF	; 255
+     6f2:	8d ec       	ldi	r24, 0xCD	; 205
+     6f4:	92 e0       	ldi	r25, 0x02	; 2
+     6f6:	0e 94 65 07 	call	0xeca	; 0xeca <Pass_Compare>
+     6fa:	81 30       	cpi	r24, 0x01	; 1
+     6fc:	49 f5       	brne	.+82     	; 0x750 <__EEPROM_REGION_LENGTH__+0x350>
+							LCD_Clear();
+     6fe:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							login_mode = GUEST_MODE;
+     702:	82 e0       	ldi	r24, 0x02	; 2
+     704:	80 93 cb 02 	sts	0x02CB, r24	; 0x8002cb <login_mode>
+							Tries = 0;
+							LCD_Clear();
+     708:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							LCD_String("Authorized");
+     70c:	85 e9       	ldi	r24, 0x95	; 149
+     70e:	91 e0       	ldi	r25, 0x01	; 1
+     710:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+							LCD_SetPos(2,4);
+     714:	64 e0       	ldi	r22, 0x04	; 4
+     716:	82 e0       	ldi	r24, 0x02	; 2
+     718:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_String("Enjoy");
+     71c:	80 ea       	ldi	r24, 0xA0	; 160
+     71e:	91 e0       	ldi	r25, 0x01	; 1
+     720:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     724:	2f ef       	ldi	r18, 0xFF	; 255
+     726:	89 e6       	ldi	r24, 0x69	; 105
+     728:	98 e1       	ldi	r25, 0x18	; 24
+     72a:	21 50       	subi	r18, 0x01	; 1
+     72c:	80 40       	sbci	r24, 0x00	; 0
+     72e:	90 40       	sbci	r25, 0x00	; 0
+     730:	e1 f7       	brne	.-8      	; 0x72a <__EEPROM_REGION_LENGTH__+0x32a>
+     732:	00 c0       	rjmp	.+0      	; 0x734 <__EEPROM_REGION_LENGTH__+0x334>
+     734:	00 00       	nop
+							_delay_ms(500);
+							LED_TurnOn(GUEST_LED_PORT);
+     736:	86 e1       	ldi	r24, 0x16	; 22
+     738:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+							LED_TurnOff(NO_MODE_PORT);
+     73c:	87 e1       	ldi	r24, 0x17	; 23
+     73e:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+							LED_TurnOff(ADMIN_LED_PORT);
+     742:	85 e1       	ldi	r24, 0x15	; 21
+     744:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+							LCD_Clear();
+     748:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+						// ***************************** COMPARE PASSWORDS *****************************
+						
+						if(Pass_Compare(password,Stored_pass, PASS_SIZE) == TRUE){
+							LCD_Clear();
+							login_mode = GUEST_MODE;
+							Tries = 0;
+     74c:	10 e0       	ldi	r17, 0x00	; 0
+     74e:	4e c0       	rjmp	.+156    	; 0x7ec <__EEPROM_REGION_LENGTH__+0x3ec>
+							LED_TurnOff(NO_MODE_PORT);
+							LED_TurnOff(ADMIN_LED_PORT);
+							LCD_Clear();
+						}
+						else{
+							LCD_Clear();
+     750:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							Tries++;
+     754:	1f 5f       	subi	r17, 0xFF	; 255
+							login_mode = NO_MODE;
+     756:	10 92 cb 02 	sts	0x02CB, r1	; 0x8002cb <login_mode>
+							LCD_String("Wrong Password");
+     75a:	8e e6       	ldi	r24, 0x6E	; 110
+     75c:	91 e0       	ldi	r25, 0x01	; 1
+     75e:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+							LCD_SetPos(2,0);
+     762:	60 e0       	ldi	r22, 0x00	; 0
+     764:	82 e0       	ldi	r24, 0x02	; 2
+     766:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+							LCD_String("Attempts: ");
+     76a:	86 ea       	ldi	r24, 0xA6	; 166
+     76c:	91 e0       	ldi	r25, 0x01	; 1
+     76e:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     772:	4a e0       	ldi	r20, 0x0A	; 10
+     774:	be 01       	movw	r22, r28
+     776:	6b 5f       	subi	r22, 0xFB	; 251
+     778:	7f 4f       	sbci	r23, 0xFF	; 255
+     77a:	81 2f       	mov	r24, r17
+     77c:	90 e0       	ldi	r25, 0x00	; 0
+     77e:	0e 94 22 0b 	call	0x1644	; 0x1644 <__itoa_ncheck>
+							LCD_String(itoa(Tries,attempt,10));
+     782:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     786:	2f ef       	ldi	r18, 0xFF	; 255
+     788:	83 ed       	ldi	r24, 0xD3	; 211
+     78a:	90 e3       	ldi	r25, 0x30	; 48
+     78c:	21 50       	subi	r18, 0x01	; 1
+     78e:	80 40       	sbci	r24, 0x00	; 0
+     790:	90 40       	sbci	r25, 0x00	; 0
+     792:	e1 f7       	brne	.-8      	; 0x78c <__EEPROM_REGION_LENGTH__+0x38c>
+     794:	00 c0       	rjmp	.+0      	; 0x796 <__EEPROM_REGION_LENGTH__+0x396>
+     796:	00 00       	nop
+							_delay_ms(1000);
+							LCD_Clear();
+     798:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+							//key_pressed = CHECK_GUEST_MODE;
+							if(Tries >= TRIES_ALLOWED){
+     79c:	13 30       	cpi	r17, 0x03	; 3
+     79e:	08 f5       	brcc	.+66     	; 0x7e2 <__EEPROM_REGION_LENGTH__+0x3e2>
+     7a0:	25 c0       	rjmp	.+74     	; 0x7ec <__EEPROM_REGION_LENGTH__+0x3ec>
+								while(key_pressed != '/'){
+									while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+									{
+										key_pressed = GetKeyPress();
+     7a2:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     7a6:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+										Buz_TurnOn(Buzzer);
+     7aa:	84 e1       	ldi	r24, 0x14	; 20
+     7ac:	0e 94 02 07 	call	0xe04	; 0xe04 <Buz_TurnOn>
+     7b0:	2f ef       	ldi	r18, 0xFF	; 255
+     7b2:	89 ef       	ldi	r24, 0xF9	; 249
+     7b4:	90 e0       	ldi	r25, 0x00	; 0
+     7b6:	21 50       	subi	r18, 0x01	; 1
+     7b8:	80 40       	sbci	r24, 0x00	; 0
+     7ba:	90 40       	sbci	r25, 0x00	; 0
+     7bc:	e1 f7       	brne	.-8      	; 0x7b6 <__EEPROM_REGION_LENGTH__+0x3b6>
+     7be:	00 c0       	rjmp	.+0      	; 0x7c0 <__EEPROM_REGION_LENGTH__+0x3c0>
+     7c0:	00 00       	nop
+										_delay_ms(20);
+										Buz_TurnOff(Buzzer);
+     7c2:	84 e1       	ldi	r24, 0x14	; 20
+     7c4:	0e 94 06 07 	call	0xe0c	; 0xe0c <Buz_TurnOff>
+     7c8:	2f ef       	ldi	r18, 0xFF	; 255
+     7ca:	89 ef       	ldi	r24, 0xF9	; 249
+     7cc:	90 e0       	ldi	r25, 0x00	; 0
+     7ce:	21 50       	subi	r18, 0x01	; 1
+     7d0:	80 40       	sbci	r24, 0x00	; 0
+     7d2:	90 40       	sbci	r25, 0x00	; 0
+     7d4:	e1 f7       	brne	.-8      	; 0x7ce <__EEPROM_REGION_LENGTH__+0x3ce>
+     7d6:	00 c0       	rjmp	.+0      	; 0x7d8 <__EEPROM_REGION_LENGTH__+0x3d8>
+     7d8:	00 00       	nop
+							_delay_ms(1000);
+							LCD_Clear();
+							//key_pressed = CHECK_GUEST_MODE;
+							if(Tries >= TRIES_ALLOWED){
+								while(key_pressed != '/'){
+									while (key_pressed == NOT_PRESSED)//repeat till the user press any key
+     7da:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     7de:	88 23       	and	r24, r24
+     7e0:	01 f3       	breq	.-64     	; 0x7a2 <__EEPROM_REGION_LENGTH__+0x3a2>
+							LCD_String(itoa(Tries,attempt,10));
+							_delay_ms(1000);
+							LCD_Clear();
+							//key_pressed = CHECK_GUEST_MODE;
+							if(Tries >= TRIES_ALLOWED){
+								while(key_pressed != '/'){
+     7e2:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     7e6:	8f 32       	cpi	r24, 0x2F	; 47
+     7e8:	c1 f7       	brne	.-16     	; 0x7da <__EEPROM_REGION_LENGTH__+0x3da>
+										_delay_ms(20);
+									}
+									
+								}
+								
+								Tries = 0;
+     7ea:	10 e0       	ldi	r17, 0x00	; 0
+					break;
+					
+			/* *************************** CHECK GUEST MODE ************************************** */
+			
+				case CHECK_GUEST_MODE:
+					while(login_mode != GUEST_MODE){
+     7ec:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     7f0:	82 30       	cpi	r24, 0x02	; 2
+     7f2:	09 f0       	breq	.+2      	; 0x7f6 <__EEPROM_REGION_LENGTH__+0x3f6>
+     7f4:	1f cf       	rjmp	.-450    	; 0x634 <__EEPROM_REGION_LENGTH__+0x234>
+     7f6:	19 c0       	rjmp	.+50     	; 0x82a <__DATA_REGION_LENGTH__+0x2a>
+							}
+						}
+					}
+					break;
+				default:
+					login_mode = NO_MODE;
+     7f8:	10 92 cb 02 	sts	0x02CB, r1	; 0x8002cb <login_mode>
+					LCD_Clear();
+     7fc:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+					LCD_SetPos(1,3);
+     800:	63 e0       	ldi	r22, 0x03	; 3
+     802:	81 e0       	ldi	r24, 0x01	; 1
+     804:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+					LCD_String("Wrong input");
+     808:	8c eb       	ldi	r24, 0xBC	; 188
+     80a:	91 e0       	ldi	r25, 0x01	; 1
+     80c:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     810:	2f ef       	ldi	r18, 0xFF	; 255
+     812:	83 ed       	ldi	r24, 0xD3	; 211
+     814:	90 e3       	ldi	r25, 0x30	; 48
+     816:	21 50       	subi	r18, 0x01	; 1
+     818:	80 40       	sbci	r24, 0x00	; 0
+     81a:	90 40       	sbci	r25, 0x00	; 0
+     81c:	e1 f7       	brne	.-8      	; 0x816 <__DATA_REGION_LENGTH__+0x16>
+     81e:	00 c0       	rjmp	.+0      	; 0x820 <__DATA_REGION_LENGTH__+0x20>
+     820:	00 00       	nop
+					_delay_ms(1000);
+					LCD_Clear();
+     822:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+					key_pressed = NOT_PRESSED;
+     826:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+		key_pressed = NOT_PRESSED;
+		Uint8 Stored_pass[PASS_SIZE];	//Array to store the password (Will be used to compare the entered password)
+		Uint8 Tries = 0;	//set the number of tries (max = 3)
+		Uint8 attempt[1];
+		
+		while(login_mode == NO_MODE){
+     82a:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     82e:	88 23       	and	r24, r24
+     830:	09 f4       	brne	.+2      	; 0x834 <__DATA_REGION_LENGTH__+0x34>
+     832:	9a cd       	rjmp	.-1228   	; 0x368 <APP_Start_login+0x1c>
+					LCD_Clear();
+					key_pressed = NOT_PRESSED;
+			}
+		}
+	//************************** LOGIN SYSTEM END *********************************
+}
+     834:	0f 90       	pop	r0
+     836:	0f 90       	pop	r0
+     838:	0f 90       	pop	r0
+     83a:	0f 90       	pop	r0
+     83c:	0f 90       	pop	r0
+     83e:	df 91       	pop	r29
+     840:	cf 91       	pop	r28
+     842:	1f 91       	pop	r17
+     844:	08 95       	ret
+
+00000846 <APP_Start_menu>:
+
+void APP_Start_menu(){
+	while(login_mode != NO_MODE){
+     846:	20 c2       	rjmp	.+1088   	; 0xc88 <__stack+0x429>
+		
+		if(menu_count == 0){
+     848:	80 91 cc 02 	lds	r24, 0x02CC	; 0x8002cc <menu_count>
+     84c:	81 11       	cpse	r24, r1
+     84e:	72 c0       	rjmp	.+228    	; 0x934 <__stack+0xd5>
+			LCD_Clear();
+     850:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+			LCD_SetPos(1,0);
+     854:	60 e0       	ldi	r22, 0x00	; 0
+     856:	81 e0       	ldi	r24, 0x01	; 1
+     858:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+			LCD_String("1:ROOM1,2:ROOM2");
+     85c:	88 ec       	ldi	r24, 0xC8	; 200
+     85e:	91 e0       	ldi	r25, 0x01	; 1
+     860:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+			LCD_SetPos(2,0);
+     864:	60 e0       	ldi	r22, 0x00	; 0
+     866:	82 e0       	ldi	r24, 0x02	; 2
+     868:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+			LCD_String("3:ROOM3,4:ROOM4");
+     86c:	88 ed       	ldi	r24, 0xD8	; 216
+     86e:	91 e0       	ldi	r25, 0x01	; 1
+     870:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     874:	5f c0       	rjmp	.+190    	; 0x934 <__stack+0xd5>
+		}
+
+		while(key_pressed == NOT_PRESSED){
+			key_pressed = GetKeyPress();
+     876:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     87a:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+			
+			// if Bluetooth is connected and message is sent
+			if(rData != NOT_PRESSED){
+     87e:	80 91 c8 02 	lds	r24, 0x02C8	; 0x8002c8 <rData>
+     882:	88 23       	and	r24, r24
+     884:	09 f4       	brne	.+2      	; 0x888 <__stack+0x29>
+     886:	56 c0       	rjmp	.+172    	; 0x934 <__stack+0xd5>
+				if(Bluetooth_login == NO_MODE){
+     888:	90 91 c6 02 	lds	r25, 0x02C6	; 0x8002c6 <__data_end>
+     88c:	91 11       	cpse	r25, r1
+     88e:	52 c0       	rjmp	.+164    	; 0x934 <__stack+0xd5>
+					
+					if((BT_sv_cnt < PASS_SIZE)){
+     890:	e0 91 c7 02 	lds	r30, 0x02C7	; 0x8002c7 <BT_sv_cnt>
+     894:	e4 30       	cpi	r30, 0x04	; 4
+     896:	b8 f4       	brcc	.+46     	; 0x8c6 <__stack+0x67>
+						
+						Pass_check[BT_sv_cnt] = rData;
+     898:	f0 e0       	ldi	r31, 0x00	; 0
+     89a:	eb 52       	subi	r30, 0x2B	; 43
+     89c:	fd 4f       	sbci	r31, 0xFD	; 253
+     89e:	80 83       	st	Z, r24
+						LCD_SetPos(2,15);
+     8a0:	6f e0       	ldi	r22, 0x0F	; 15
+     8a2:	82 e0       	ldi	r24, 0x02	; 2
+     8a4:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+						LCD_String(" ");
+     8a8:	89 e3       	ldi	r24, 0x39	; 57
+     8aa:	92 e0       	ldi	r25, 0x02	; 2
+     8ac:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+						LCD_String(Pass_check);
+     8b0:	85 ed       	ldi	r24, 0xD5	; 213
+     8b2:	92 e0       	ldi	r25, 0x02	; 2
+     8b4:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+						BT_sv_cnt++;
+     8b8:	80 91 c7 02 	lds	r24, 0x02C7	; 0x8002c7 <BT_sv_cnt>
+     8bc:	8f 5f       	subi	r24, 0xFF	; 255
+     8be:	80 93 c7 02 	sts	0x02C7, r24	; 0x8002c7 <BT_sv_cnt>
+						rData = NOT_PRESSED;
+     8c2:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+					}
+					if(BT_sv_cnt == 4){
+     8c6:	80 91 c7 02 	lds	r24, 0x02C7	; 0x8002c7 <BT_sv_cnt>
+     8ca:	84 30       	cpi	r24, 0x04	; 4
+     8cc:	99 f5       	brne	.+102    	; 0x934 <__stack+0xd5>
+
+						EEPROM_ReadBlock(EEPROM_ADMIN_ADDRESS,bluetooth_pass_check,PASS_SIZE);
+     8ce:	44 e0       	ldi	r20, 0x04	; 4
+     8d0:	50 e0       	ldi	r21, 0x00	; 0
+     8d2:	61 ed       	ldi	r22, 0xD1	; 209
+     8d4:	72 e0       	ldi	r23, 0x02	; 2
+     8d6:	82 e0       	ldi	r24, 0x02	; 2
+     8d8:	91 e0       	ldi	r25, 0x01	; 1
+     8da:	0e 94 13 07 	call	0xe26	; 0xe26 <EEPROM_ReadBlock>
+						
+						if(Pass_Compare(Pass_check,bluetooth_pass_check, PASS_SIZE) == TRUE){
+     8de:	44 e0       	ldi	r20, 0x04	; 4
+     8e0:	61 ed       	ldi	r22, 0xD1	; 209
+     8e2:	72 e0       	ldi	r23, 0x02	; 2
+     8e4:	85 ed       	ldi	r24, 0xD5	; 213
+     8e6:	92 e0       	ldi	r25, 0x02	; 2
+     8e8:	0e 94 65 07 	call	0xeca	; 0xeca <Pass_Compare>
+     8ec:	81 30       	cpi	r24, 0x01	; 1
+     8ee:	e1 f4       	brne	.+56     	; 0x928 <__stack+0xc9>
+							Bluetooth_TransmitString("Logged in");
+     8f0:	84 e6       	ldi	r24, 0x64	; 100
+     8f2:	91 e0       	ldi	r25, 0x01	; 1
+     8f4:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+							Bluetooth_New_line();
+     8f8:	0e 94 81 07 	call	0xf02	; 0xf02 <Bluetooth_New_line>
+							Bluetooth_login = ADMIN_MODE;
+     8fc:	81 e0       	ldi	r24, 0x01	; 1
+     8fe:	80 93 c6 02 	sts	0x02C6, r24	; 0x8002c6 <__data_end>
+							LED_TurnOn(Bluetooth_LED_PORT);
+     902:	82 e1       	ldi	r24, 0x12	; 18
+     904:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+     908:	2f ef       	ldi	r18, 0xFF	; 255
+     90a:	83 ec       	ldi	r24, 0xC3	; 195
+     90c:	99 e0       	ldi	r25, 0x09	; 9
+     90e:	21 50       	subi	r18, 0x01	; 1
+     910:	80 40       	sbci	r24, 0x00	; 0
+     912:	90 40       	sbci	r25, 0x00	; 0
+     914:	e1 f7       	brne	.-8      	; 0x90e <__stack+0xaf>
+     916:	00 c0       	rjmp	.+0      	; 0x918 <__stack+0xb9>
+     918:	00 00       	nop
+							_delay_ms(200);
+							Bluetooth_T_Admin_menu();
+     91a:	0e 94 84 07 	call	0xf08	; 0xf08 <Bluetooth_T_Admin_menu>
+							BT_sv_cnt =0;
+     91e:	10 92 c7 02 	sts	0x02C7, r1	; 0x8002c7 <BT_sv_cnt>
+							rData = NOT_PRESSED;
+     922:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+     926:	06 c0       	rjmp	.+12     	; 0x934 <__stack+0xd5>
+						}
+						else{
+							Bluetooth_TransmitString("Wrong Password");
+     928:	8e e6       	ldi	r24, 0x6E	; 110
+     92a:	91 e0       	ldi	r25, 0x01	; 1
+     92c:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+							BT_sv_cnt =0;
+     930:	10 92 c7 02 	sts	0x02C7, r1	; 0x8002c7 <BT_sv_cnt>
+			LCD_String("1:ROOM1,2:ROOM2");
+			LCD_SetPos(2,0);
+			LCD_String("3:ROOM3,4:ROOM4");
+		}
+
+		while(key_pressed == NOT_PRESSED){
+     934:	e0 91 ca 02 	lds	r30, 0x02CA	; 0x8002ca <key_pressed>
+     938:	ee 23       	and	r30, r30
+     93a:	09 f4       	brne	.+2      	; 0x93e <__stack+0xdf>
+     93c:	9c cf       	rjmp	.-200    	; 0x876 <__stack+0x17>
+					}
+				}
+			}
+		}
+
+		switch(key_pressed){
+     93e:	8e 2f       	mov	r24, r30
+     940:	90 e0       	ldi	r25, 0x00	; 0
+     942:	fc 01       	movw	r30, r24
+     944:	bb 97       	sbiw	r30, 0x2b	; 43
+     946:	e9 31       	cpi	r30, 0x19	; 25
+     948:	f1 05       	cpc	r31, r1
+     94a:	08 f0       	brcs	.+2      	; 0x94e <__stack+0xef>
+     94c:	9d c1       	rjmp	.+826    	; 0xc88 <__stack+0x429>
+     94e:	e6 5d       	subi	r30, 0xD6	; 214
+     950:	ff 4f       	sbci	r31, 0xFF	; 255
+     952:	0c 94 1c 0b 	jmp	0x1638	; 0x1638 <__tablejump2__>
+			// '+' FOR ARRow Down
+			case ARROW_DOWN:
+			menu_count++;
+     956:	80 91 cc 02 	lds	r24, 0x02CC	; 0x8002cc <menu_count>
+     95a:	8f 5f       	subi	r24, 0xFF	; 255
+     95c:	80 93 cc 02 	sts	0x02CC, r24	; 0x8002cc <menu_count>
+			if(menu_count == 1){
+     960:	81 30       	cpi	r24, 0x01	; 1
+     962:	09 f5       	brne	.+66     	; 0x9a6 <__stack+0x147>
+				LCD_Clear();
+     964:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+				LCD_SetPos(1,0);
+     968:	60 e0       	ldi	r22, 0x00	; 0
+     96a:	81 e0       	ldi	r24, 0x01	; 1
+     96c:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				LCD_String("5:ROOM5,6:Dim");
+     970:	88 ee       	ldi	r24, 0xE8	; 232
+     972:	91 e0       	ldi	r25, 0x01	; 1
+     974:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				LCD_SetPos(2,0);
+     978:	60 e0       	ldi	r22, 0x00	; 0
+     97a:	82 e0       	ldi	r24, 0x02	; 2
+     97c:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				if(login_mode == GUEST_MODE && Guest_access == Guest_access_False){
+     980:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     984:	82 30       	cpi	r24, 0x02	; 2
+     986:	49 f4       	brne	.+18     	; 0x99a <__stack+0x13b>
+     988:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     98c:	80 33       	cpi	r24, 0x30	; 48
+     98e:	29 f4       	brne	.+10     	; 0x99a <__stack+0x13b>
+					LCD_String("7:AC");
+     990:	86 ef       	ldi	r24, 0xF6	; 246
+     992:	91 e0       	ldi	r25, 0x01	; 1
+     994:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     998:	04 c0       	rjmp	.+8      	; 0x9a2 <__stack+0x143>
+				}
+				else{
+					LCD_String("7:AC,8:DOOR");
+     99a:	8b ef       	ldi	r24, 0xFB	; 251
+     99c:	91 e0       	ldi	r25, 0x01	; 1
+     99e:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				}
+				key_pressed = NOT_PRESSED;
+     9a2:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			}
+			if(menu_count == 2){
+     9a6:	80 91 cc 02 	lds	r24, 0x02CC	; 0x8002cc <menu_count>
+     9aa:	82 30       	cpi	r24, 0x02	; 2
+     9ac:	f9 f4       	brne	.+62     	; 0x9ec <__stack+0x18d>
+				LCD_Clear();
+     9ae:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+				LCD_SetPos(1,0);
+     9b2:	60 e0       	ldi	r22, 0x00	; 0
+     9b4:	81 e0       	ldi	r24, 0x01	; 1
+     9b6:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				if(login_mode == GUEST_MODE && Guest_access == Guest_access_False){
+     9ba:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     9be:	82 30       	cpi	r24, 0x02	; 2
+     9c0:	49 f4       	brne	.+18     	; 0x9d4 <__stack+0x175>
+     9c2:	90 91 60 00 	lds	r25, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     9c6:	90 33       	cpi	r25, 0x30	; 48
+     9c8:	29 f4       	brne	.+10     	; 0x9d4 <__stack+0x175>
+					LCD_String("8:Logout");
+     9ca:	87 e0       	ldi	r24, 0x07	; 7
+     9cc:	92 e0       	ldi	r25, 0x02	; 2
+     9ce:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     9d2:	0a c0       	rjmp	.+20     	; 0x9e8 <__stack+0x189>
+				}
+				else{
+					if(login_mode == ADMIN_MODE){
+     9d4:	81 30       	cpi	r24, 0x01	; 1
+     9d6:	21 f4       	brne	.+8      	; 0x9e0 <__stack+0x181>
+						LCD_String("9:Access");
+     9d8:	80 e1       	ldi	r24, 0x10	; 16
+     9da:	92 e0       	ldi	r25, 0x02	; 2
+     9dc:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+					}
+					LCD_String("C:Logout");
+     9e0:	89 e1       	ldi	r24, 0x19	; 25
+     9e2:	92 e0       	ldi	r25, 0x02	; 2
+     9e4:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				}
+				key_pressed = NOT_PRESSED;
+     9e8:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			}
+			if(menu_count > 2){
+     9ec:	80 91 cc 02 	lds	r24, 0x02CC	; 0x8002cc <menu_count>
+     9f0:	83 30       	cpi	r24, 0x03	; 3
+     9f2:	08 f4       	brcc	.+2      	; 0x9f6 <__stack+0x197>
+     9f4:	49 c1       	rjmp	.+658    	; 0xc88 <__stack+0x429>
+				menu_count = 0;
+     9f6:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+				key_pressed = NOT_PRESSED;
+     9fa:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+     9fe:	44 c1       	rjmp	.+648    	; 0xc88 <__stack+0x429>
+			}
+			break;
+			/* ******************* ROOM1 ***************** */
+			case ROOM1:
+			SPI_TxRx(ROOM1);
+     a00:	81 e3       	ldi	r24, 0x31	; 49
+     a02:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			LCD_Clear();
+     a06:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     a0a:	2f ef       	ldi	r18, 0xFF	; 255
+     a0c:	81 ee       	ldi	r24, 0xE1	; 225
+     a0e:	94 e0       	ldi	r25, 0x04	; 4
+     a10:	21 50       	subi	r18, 0x01	; 1
+     a12:	80 40       	sbci	r24, 0x00	; 0
+     a14:	90 40       	sbci	r25, 0x00	; 0
+     a16:	e1 f7       	brne	.-8      	; 0xa10 <__stack+0x1b1>
+     a18:	00 c0       	rjmp	.+0      	; 0xa1a <__stack+0x1bb>
+     a1a:	00 00       	nop
+			_delay_ms(100);
+			menu_count = 0;
+     a1c:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     a20:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     a24:	31 c1       	rjmp	.+610    	; 0xc88 <__stack+0x429>
+			/* ******************* ROOM2 ***************** */
+			case ROOM2:
+			SPI_TxRx(ROOM2);
+     a26:	82 e3       	ldi	r24, 0x32	; 50
+     a28:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			LCD_Clear();
+     a2c:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     a30:	2f ef       	ldi	r18, 0xFF	; 255
+     a32:	81 ee       	ldi	r24, 0xE1	; 225
+     a34:	94 e0       	ldi	r25, 0x04	; 4
+     a36:	21 50       	subi	r18, 0x01	; 1
+     a38:	80 40       	sbci	r24, 0x00	; 0
+     a3a:	90 40       	sbci	r25, 0x00	; 0
+     a3c:	e1 f7       	brne	.-8      	; 0xa36 <__stack+0x1d7>
+     a3e:	00 c0       	rjmp	.+0      	; 0xa40 <__stack+0x1e1>
+     a40:	00 00       	nop
+			_delay_ms(100);
+			menu_count = 0;
+     a42:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     a46:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     a4a:	1e c1       	rjmp	.+572    	; 0xc88 <__stack+0x429>
+			/* ******************* ROOM3 ***************** */
+			case ROOM3:
+			SPI_TxRx(ROOM3);
+     a4c:	83 e3       	ldi	r24, 0x33	; 51
+     a4e:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			LCD_Clear();
+     a52:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     a56:	2f ef       	ldi	r18, 0xFF	; 255
+     a58:	81 ee       	ldi	r24, 0xE1	; 225
+     a5a:	94 e0       	ldi	r25, 0x04	; 4
+     a5c:	21 50       	subi	r18, 0x01	; 1
+     a5e:	80 40       	sbci	r24, 0x00	; 0
+     a60:	90 40       	sbci	r25, 0x00	; 0
+     a62:	e1 f7       	brne	.-8      	; 0xa5c <__stack+0x1fd>
+     a64:	00 c0       	rjmp	.+0      	; 0xa66 <__stack+0x207>
+     a66:	00 00       	nop
+			_delay_ms(100);
+			menu_count = 0;
+     a68:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     a6c:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     a70:	0b c1       	rjmp	.+534    	; 0xc88 <__stack+0x429>
+			/* ******************* ROOM4 ***************** */
+			case ROOM4:
+			SPI_TxRx(ROOM4);
+     a72:	84 e3       	ldi	r24, 0x34	; 52
+     a74:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			LCD_Clear();
+     a78:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     a7c:	2f ef       	ldi	r18, 0xFF	; 255
+     a7e:	81 ee       	ldi	r24, 0xE1	; 225
+     a80:	94 e0       	ldi	r25, 0x04	; 4
+     a82:	21 50       	subi	r18, 0x01	; 1
+     a84:	80 40       	sbci	r24, 0x00	; 0
+     a86:	90 40       	sbci	r25, 0x00	; 0
+     a88:	e1 f7       	brne	.-8      	; 0xa82 <__stack+0x223>
+     a8a:	00 c0       	rjmp	.+0      	; 0xa8c <__stack+0x22d>
+     a8c:	00 00       	nop
+			_delay_ms(100);
+			menu_count = 0;
+     a8e:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     a92:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     a96:	f8 c0       	rjmp	.+496    	; 0xc88 <__stack+0x429>
+			/* ******************* ROOM5 ***************** */
+			case ROOM5:
+			SPI_TxRx(ROOM5);
+     a98:	85 e3       	ldi	r24, 0x35	; 53
+     a9a:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			LCD_Clear();
+     a9e:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     aa2:	2f ef       	ldi	r18, 0xFF	; 255
+     aa4:	81 ee       	ldi	r24, 0xE1	; 225
+     aa6:	94 e0       	ldi	r25, 0x04	; 4
+     aa8:	21 50       	subi	r18, 0x01	; 1
+     aaa:	80 40       	sbci	r24, 0x00	; 0
+     aac:	90 40       	sbci	r25, 0x00	; 0
+     aae:	e1 f7       	brne	.-8      	; 0xaa8 <__stack+0x249>
+     ab0:	00 c0       	rjmp	.+0      	; 0xab2 <__stack+0x253>
+     ab2:	00 00       	nop
+			_delay_ms(100);
+			menu_count = 0;
+     ab4:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     ab8:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     abc:	e5 c0       	rjmp	.+458    	; 0xc88 <__stack+0x429>
+			/* ******************* Dimmer ***************** */
+			case Dimmer:
+			SPI_TxRx(Dimmer);
+     abe:	86 e3       	ldi	r24, 0x36	; 54
+     ac0:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			menu_count = 0;
+     ac4:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     ac8:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     acc:	dd c0       	rjmp	.+442    	; 0xc88 <__stack+0x429>
+			/* ******************* Air Conditioner ***************** */
+			
+			case AC:
+			SPI_TxRx(AC);
+     ace:	87 e3       	ldi	r24, 0x37	; 55
+     ad0:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			LCD_Clear();
+     ad4:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     ad8:	2f ef       	ldi	r18, 0xFF	; 255
+     ada:	83 ec       	ldi	r24, 0xC3	; 195
+     adc:	99 e0       	ldi	r25, 0x09	; 9
+     ade:	21 50       	subi	r18, 0x01	; 1
+     ae0:	80 40       	sbci	r24, 0x00	; 0
+     ae2:	90 40       	sbci	r25, 0x00	; 0
+     ae4:	e1 f7       	brne	.-8      	; 0xade <__stack+0x27f>
+     ae6:	00 c0       	rjmp	.+0      	; 0xae8 <__stack+0x289>
+     ae8:	00 00       	nop
+			_delay_ms(200);
+			menu_count = 0;
+     aea:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+			key_pressed = NOT_PRESSED;
+     aee:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+			break;
+     af2:	ca c0       	rjmp	.+404    	; 0xc88 <__stack+0x429>
+			
+			/* ******************* DOOR ***************** */
+			case DOOR:
+			if(login_mode == ADMIN_MODE || (login_mode == GUEST_MODE && Guest_access == Guest_access_True)){
+     af4:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     af8:	81 30       	cpi	r24, 0x01	; 1
+     afa:	31 f0       	breq	.+12     	; 0xb08 <__stack+0x2a9>
+     afc:	82 30       	cpi	r24, 0x02	; 2
+     afe:	b9 f4       	brne	.+46     	; 0xb2e <__stack+0x2cf>
+     b00:	90 91 60 00 	lds	r25, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     b04:	91 33       	cpi	r25, 0x31	; 49
+     b06:	99 f4       	brne	.+38     	; 0xb2e <__stack+0x2cf>
+				SPI_TxRx(DOOR);
+     b08:	88 e3       	ldi	r24, 0x38	; 56
+     b0a:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+				LCD_Clear();
+     b0e:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+     b12:	2f ef       	ldi	r18, 0xFF	; 255
+     b14:	85 ea       	ldi	r24, 0xA5	; 165
+     b16:	9e e0       	ldi	r25, 0x0E	; 14
+     b18:	21 50       	subi	r18, 0x01	; 1
+     b1a:	80 40       	sbci	r24, 0x00	; 0
+     b1c:	90 40       	sbci	r25, 0x00	; 0
+     b1e:	e1 f7       	brne	.-8      	; 0xb18 <__stack+0x2b9>
+     b20:	00 c0       	rjmp	.+0      	; 0xb22 <__stack+0x2c3>
+     b22:	00 00       	nop
+				_delay_ms(300);
+				menu_count = 0;
+     b24:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+				key_pressed = NOT_PRESSED;
+     b28:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+     b2c:	ad c0       	rjmp	.+346    	; 0xc88 <__stack+0x429>
+			}
+			else if(login_mode == GUEST_MODE && Guest_access == Guest_access_False){
+     b2e:	82 30       	cpi	r24, 0x02	; 2
+     b30:	09 f0       	breq	.+2      	; 0xb34 <__stack+0x2d5>
+     b32:	aa c0       	rjmp	.+340    	; 0xc88 <__stack+0x429>
+     b34:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     b38:	80 33       	cpi	r24, 0x30	; 48
+     b3a:	09 f0       	breq	.+2      	; 0xb3e <__stack+0x2df>
+     b3c:	a5 c0       	rjmp	.+330    	; 0xc88 <__stack+0x429>
+				login_mode = NO_MODE;
+     b3e:	10 92 cb 02 	sts	0x02CB, r1	; 0x8002cb <login_mode>
+				LED_TurnOff(ADMIN_LED_PORT);
+     b42:	85 e1       	ldi	r24, 0x15	; 21
+     b44:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+				LED_TurnOn(NO_MODE_PORT);
+     b48:	87 e1       	ldi	r24, 0x17	; 23
+     b4a:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+				LED_TurnOff(GUEST_LED_PORT);
+     b4e:	86 e1       	ldi	r24, 0x16	; 22
+     b50:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+				menu_count = 0;
+     b54:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+				key_pressed = NOT_PRESSED;
+     b58:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+     b5c:	95 c0       	rjmp	.+298    	; 0xc88 <__stack+0x429>
+			break;
+			
+			/* ******************* Give access to guest ***************** */
+			
+			case Access:
+			if(login_mode == ADMIN_MODE){
+     b5e:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     b62:	81 30       	cpi	r24, 0x01	; 1
+     b64:	d1 f5       	brne	.+116    	; 0xbda <__stack+0x37b>
+				LCD_Clear();
+     b66:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+				LCD_String("Guest Access: ");
+     b6a:	82 e2       	ldi	r24, 0x22	; 34
+     b6c:	92 e0       	ldi	r25, 0x02	; 2
+     b6e:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				LCD_SetPos(2,0);
+     b72:	60 e0       	ldi	r22, 0x00	; 0
+     b74:	82 e0       	ldi	r24, 0x02	; 2
+     b76:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				LCD_String("Yes: 1");
+     b7a:	81 e3       	ldi	r24, 0x31	; 49
+     b7c:	92 e0       	ldi	r25, 0x02	; 2
+     b7e:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				LCD_String("  ");
+     b82:	88 e3       	ldi	r24, 0x38	; 56
+     b84:	92 e0       	ldi	r25, 0x02	; 2
+     b86:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				LCD_String("NO: 0");
+     b8a:	8b e3       	ldi	r24, 0x3B	; 59
+     b8c:	92 e0       	ldi	r25, 0x02	; 2
+     b8e:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				
+				key_pressed = NOT_PRESSED;
+     b92:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+				while(key_pressed == NOT_PRESSED){
+     b96:	04 c0       	rjmp	.+8      	; 0xba0 <__stack+0x341>
+					key_pressed = GetKeyPress();
+     b98:	0e 94 87 07 	call	0xf0e	; 0xf0e <GetKeyPress>
+     b9c:	80 93 ca 02 	sts	0x02CA, r24	; 0x8002ca <key_pressed>
+				LCD_String("Yes: 1");
+				LCD_String("  ");
+				LCD_String("NO: 0");
+				
+				key_pressed = NOT_PRESSED;
+				while(key_pressed == NOT_PRESSED){
+     ba0:	80 91 ca 02 	lds	r24, 0x02CA	; 0x8002ca <key_pressed>
+     ba4:	88 23       	and	r24, r24
+     ba6:	c1 f3       	breq	.-16     	; 0xb98 <__stack+0x339>
+					key_pressed = GetKeyPress();
+				}
+				if(key_pressed == Guest_access_True){
+     ba8:	81 33       	cpi	r24, 0x31	; 49
+     baa:	51 f4       	brne	.+20     	; 0xbc0 <__stack+0x361>
+					Guest_access = Guest_access_True;
+     bac:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+					LED_TurnOn(Access_LED_PORT);
+     bb0:	83 e1       	ldi	r24, 0x13	; 19
+     bb2:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+					menu_count = 0;
+     bb6:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+					key_pressed = NOT_PRESSED;
+     bba:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+     bbe:	64 c0       	rjmp	.+200    	; 0xc88 <__stack+0x429>
+				}
+				else if(key_pressed == Guest_access_False){
+     bc0:	80 33       	cpi	r24, 0x30	; 48
+     bc2:	09 f0       	breq	.+2      	; 0xbc6 <__stack+0x367>
+     bc4:	61 c0       	rjmp	.+194    	; 0xc88 <__stack+0x429>
+					Guest_access = Guest_access_False;
+     bc6:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+					LED_TurnOff(Access_LED_PORT);
+     bca:	83 e1       	ldi	r24, 0x13	; 19
+     bcc:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+					menu_count = 0;
+     bd0:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+					key_pressed = NOT_PRESSED;
+     bd4:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+     bd8:	57 c0       	rjmp	.+174    	; 0xc88 <__stack+0x429>
+				}
+			}
+			else{
+				key_pressed = NOT_PRESSED;
+     bda:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+				menu_count = 0;
+     bde:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+				LCD_Clear();
+     be2:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+				LCD_SetPos(1,0);
+     be6:	60 e0       	ldi	r22, 0x00	; 0
+     be8:	81 e0       	ldi	r24, 0x01	; 1
+     bea:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				LCD_String("Please choose");
+     bee:	81 e4       	ldi	r24, 0x41	; 65
+     bf0:	92 e0       	ldi	r25, 0x02	; 2
+     bf2:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				LCD_SetPos(2,0);
+     bf6:	60 e0       	ldi	r22, 0x00	; 0
+     bf8:	82 e0       	ldi	r24, 0x02	; 2
+     bfa:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				LCD_String(" from the list");
+     bfe:	85 e5       	ldi	r24, 0x55	; 85
+     c00:	92 e0       	ldi	r25, 0x02	; 2
+     c02:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     c06:	2f ef       	ldi	r18, 0xFF	; 255
+     c08:	8f e0       	ldi	r24, 0x0F	; 15
+     c0a:	97 e2       	ldi	r25, 0x27	; 39
+     c0c:	21 50       	subi	r18, 0x01	; 1
+     c0e:	80 40       	sbci	r24, 0x00	; 0
+     c10:	90 40       	sbci	r25, 0x00	; 0
+     c12:	e1 f7       	brne	.-8      	; 0xc0c <__stack+0x3ad>
+     c14:	00 c0       	rjmp	.+0      	; 0xc16 <__stack+0x3b7>
+     c16:	00 00       	nop
+     c18:	37 c0       	rjmp	.+110    	; 0xc88 <__stack+0x429>
+			break;
+
+			/* ******************* LOGOUT SYSTEM ***************** */
+
+			case Logout:
+			if(login_mode == ADMIN_MODE || (login_mode == GUEST_MODE && Guest_access == Guest_access_True)){
+     c1a:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     c1e:	81 30       	cpi	r24, 0x01	; 1
+     c20:	31 f0       	breq	.+12     	; 0xc2e <__stack+0x3cf>
+     c22:	82 30       	cpi	r24, 0x02	; 2
+     c24:	91 f4       	brne	.+36     	; 0xc4a <__stack+0x3eb>
+     c26:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     c2a:	81 33       	cpi	r24, 0x31	; 49
+     c2c:	71 f4       	brne	.+28     	; 0xc4a <__stack+0x3eb>
+				login_mode = NO_MODE;
+     c2e:	10 92 cb 02 	sts	0x02CB, r1	; 0x8002cb <login_mode>
+				LED_TurnOff(ADMIN_LED_PORT);
+     c32:	85 e1       	ldi	r24, 0x15	; 21
+     c34:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+				LED_TurnOn(NO_MODE_PORT);
+     c38:	87 e1       	ldi	r24, 0x17	; 23
+     c3a:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+				LED_TurnOff(GUEST_LED_PORT);
+     c3e:	86 e1       	ldi	r24, 0x16	; 22
+     c40:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+				menu_count = 0;
+     c44:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+     c48:	1f c0       	rjmp	.+62     	; 0xc88 <__stack+0x429>
+			}
+			else{
+				key_pressed = NOT_PRESSED;
+     c4a:	10 92 ca 02 	sts	0x02CA, r1	; 0x8002ca <key_pressed>
+				menu_count = 0;
+     c4e:	10 92 cc 02 	sts	0x02CC, r1	; 0x8002cc <menu_count>
+				LCD_Clear();
+     c52:	0e 94 7d 08 	call	0x10fa	; 0x10fa <LCD_Clear>
+				LCD_SetPos(1,0);
+     c56:	60 e0       	ldi	r22, 0x00	; 0
+     c58:	81 e0       	ldi	r24, 0x01	; 1
+     c5a:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				LCD_String("Please choose");
+     c5e:	81 e4       	ldi	r24, 0x41	; 65
+     c60:	92 e0       	ldi	r25, 0x02	; 2
+     c62:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+				LCD_SetPos(2,0);
+     c66:	60 e0       	ldi	r22, 0x00	; 0
+     c68:	82 e0       	ldi	r24, 0x02	; 2
+     c6a:	0e 94 6a 08 	call	0x10d4	; 0x10d4 <LCD_SetPos>
+				LCD_String(" from the list");
+     c6e:	85 e5       	ldi	r24, 0x55	; 85
+     c70:	92 e0       	ldi	r25, 0x02	; 2
+     c72:	0e 94 57 08 	call	0x10ae	; 0x10ae <LCD_String>
+     c76:	2f ef       	ldi	r18, 0xFF	; 255
+     c78:	8f e0       	ldi	r24, 0x0F	; 15
+     c7a:	97 e2       	ldi	r25, 0x27	; 39
+     c7c:	21 50       	subi	r18, 0x01	; 1
+     c7e:	80 40       	sbci	r24, 0x00	; 0
+     c80:	90 40       	sbci	r25, 0x00	; 0
+     c82:	e1 f7       	brne	.-8      	; 0xc7c <__stack+0x41d>
+     c84:	00 c0       	rjmp	.+0      	; 0xc86 <__stack+0x427>
+     c86:	00 00       	nop
+		}
+	//************************** LOGIN SYSTEM END *********************************
+}
+
+void APP_Start_menu(){
+	while(login_mode != NO_MODE){
+     c88:	80 91 cb 02 	lds	r24, 0x02CB	; 0x8002cb <login_mode>
+     c8c:	81 11       	cpse	r24, r1
+     c8e:	dc cd       	rjmp	.-1096   	; 0x848 <APP_Start_menu+0x2>
+			default:
+			
+			break;
+		}
+	}
+}
+     c90:	08 95       	ret
+
+00000c92 <__vector_13>:
+
+
+
+ISR(USART_RXC_vect){
+     c92:	1f 92       	push	r1
+     c94:	0f 92       	push	r0
+     c96:	0f b6       	in	r0, 0x3f	; 63
+     c98:	0f 92       	push	r0
+     c9a:	11 24       	eor	r1, r1
+     c9c:	2f 93       	push	r18
+     c9e:	3f 93       	push	r19
+     ca0:	4f 93       	push	r20
+     ca2:	5f 93       	push	r21
+     ca4:	6f 93       	push	r22
+     ca6:	7f 93       	push	r23
+     ca8:	8f 93       	push	r24
+     caa:	9f 93       	push	r25
+     cac:	af 93       	push	r26
+     cae:	bf 93       	push	r27
+     cb0:	ef 93       	push	r30
+     cb2:	ff 93       	push	r31
+	
+	rData = UDR;
+     cb4:	ec b1       	in	r30, 0x0c	; 12
+     cb6:	e0 93 c8 02 	sts	0x02C8, r30	; 0x8002c8 <rData>
+	
+	/* when logged in */
+	
+	if(Bluetooth_login == ADMIN_MODE){
+     cba:	20 91 c6 02 	lds	r18, 0x02C6	; 0x8002c6 <__data_end>
+     cbe:	21 30       	cpi	r18, 0x01	; 1
+     cc0:	09 f0       	breq	.+2      	; 0xcc4 <__vector_13+0x32>
+     cc2:	8c c0       	rjmp	.+280    	; 0xddc <__vector_13+0x14a>
+		switch(rData){
+     cc4:	8e 2f       	mov	r24, r30
+     cc6:	90 e0       	ldi	r25, 0x00	; 0
+     cc8:	fc 01       	movw	r30, r24
+     cca:	f1 97       	sbiw	r30, 0x31	; 49
+     ccc:	e3 31       	cpi	r30, 0x13	; 19
+     cce:	f1 05       	cpc	r31, r1
+     cd0:	08 f0       	brcs	.+2      	; 0xcd4 <__vector_13+0x42>
+     cd2:	84 c0       	rjmp	.+264    	; 0xddc <__vector_13+0x14a>
+     cd4:	ed 5b       	subi	r30, 0xBD	; 189
+     cd6:	ff 4f       	sbci	r31, 0xFF	; 255
+     cd8:	0c 94 1c 0b 	jmp	0x1638	; 0x1638 <__tablejump2__>
+			/* ********* ROOM1 ********** */
+			case ROOM1:
+			SPI_TxRx(ROOM1);
+     cdc:	81 e3       	ldi	r24, 0x31	; 49
+     cde:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     ce2:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("ROOM1");
+     ce6:	89 e7       	ldi	r24, 0x79	; 121
+     ce8:	92 e0       	ldi	r25, 0x02	; 2
+     cea:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     cee:	76 c0       	rjmp	.+236    	; 0xddc <__vector_13+0x14a>
+			/* ********* ROOM2 ********** */
+			case ROOM2:
+			SPI_TxRx(ROOM2);
+     cf0:	82 e3       	ldi	r24, 0x32	; 50
+     cf2:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     cf6:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("ROOM2");
+     cfa:	81 e8       	ldi	r24, 0x81	; 129
+     cfc:	92 e0       	ldi	r25, 0x02	; 2
+     cfe:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     d02:	6c c0       	rjmp	.+216    	; 0xddc <__vector_13+0x14a>
+			/* ********* ROOM3 ********** */
+			case ROOM3:
+			SPI_TxRx(ROOM3);
+     d04:	83 e3       	ldi	r24, 0x33	; 51
+     d06:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     d0a:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("ROOM3");
+     d0e:	89 e8       	ldi	r24, 0x89	; 137
+     d10:	92 e0       	ldi	r25, 0x02	; 2
+     d12:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     d16:	62 c0       	rjmp	.+196    	; 0xddc <__vector_13+0x14a>
+			/* ********* ROOM4 ********** */
+			case ROOM4:
+			SPI_TxRx(ROOM4);
+     d18:	84 e3       	ldi	r24, 0x34	; 52
+     d1a:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     d1e:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("ROOM4");
+     d22:	81 e9       	ldi	r24, 0x91	; 145
+     d24:	92 e0       	ldi	r25, 0x02	; 2
+     d26:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     d2a:	58 c0       	rjmp	.+176    	; 0xddc <__vector_13+0x14a>
+			/* ********* ROOM5 ********** */
+			case ROOM5:
+			SPI_TxRx(ROOM5);
+     d2c:	85 e3       	ldi	r24, 0x35	; 53
+     d2e:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     d32:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("ROOM5");
+     d36:	89 e9       	ldi	r24, 0x99	; 153
+     d38:	92 e0       	ldi	r25, 0x02	; 2
+     d3a:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     d3e:	4e c0       	rjmp	.+156    	; 0xddc <__vector_13+0x14a>
+			case Dimmer:
+			SPI_TxRx(Dimmer);
+     d40:	86 e3       	ldi	r24, 0x36	; 54
+     d42:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     d46:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("Dimmer");
+     d4a:	81 ea       	ldi	r24, 0xA1	; 161
+     d4c:	92 e0       	ldi	r25, 0x02	; 2
+     d4e:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     d52:	44 c0       	rjmp	.+136    	; 0xddc <__vector_13+0x14a>
+			/* ********* AC ********** */
+			case AC:
+			SPI_TxRx(AC);
+     d54:	87 e3       	ldi	r24, 0x37	; 55
+     d56:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+			rData = 0;
+     d5a:	10 92 c8 02 	sts	0x02C8, r1	; 0x8002c8 <rData>
+			Bluetooth_TransmitString("AC");
+     d5e:	8a ea       	ldi	r24, 0xAA	; 170
+     d60:	92 e0       	ldi	r25, 0x02	; 2
+     d62:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			break;
+     d66:	3a c0       	rjmp	.+116    	; 0xddc <__vector_13+0x14a>
+			/* ********* Door ********** */
+			case DOOR:
+			if(Bluetooth_login == ADMIN_MODE){
+     d68:	21 30       	cpi	r18, 0x01	; 1
+     d6a:	41 f4       	brne	.+16     	; 0xd7c <__vector_13+0xea>
+				SPI_TxRx(DOOR);
+     d6c:	88 e3       	ldi	r24, 0x38	; 56
+     d6e:	0e 94 b6 0a 	call	0x156c	; 0x156c <SPI_TxRx>
+				Bluetooth_TransmitString("DOOR");
+     d72:	8f ea       	ldi	r24, 0xAF	; 175
+     d74:	92 e0       	ldi	r25, 0x02	; 2
+     d76:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+     d7a:	30 c0       	rjmp	.+96     	; 0xddc <__vector_13+0x14a>
+			}
+			else{
+				Bluetooth_TransmitString("Choose from the list");
+     d7c:	8f e4       	ldi	r24, 0x4F	; 79
+     d7e:	92 e0       	ldi	r25, 0x02	; 2
+     d80:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+     d84:	2b c0       	rjmp	.+86     	; 0xddc <__vector_13+0x14a>
+			}
+			break;
+			/* ********* Guest Access ********** */
+			case Access:
+			if(Bluetooth_login == ADMIN_MODE){
+     d86:	21 30       	cpi	r18, 0x01	; 1
+     d88:	41 f4       	brne	.+16     	; 0xd9a <__vector_13+0x108>
+				Uint8 cnt = 0;
+				
+				if(cnt == 0){
+					LED_TurnOn(Access_LED_PORT);
+     d8a:	83 e1       	ldi	r24, 0x13	; 19
+     d8c:	0e 94 84 08 	call	0x1108	; 0x1108 <LED_TurnOn>
+					Bluetooth_TransmitString("Granted");
+     d90:	84 e6       	ldi	r24, 0x64	; 100
+     d92:	92 e0       	ldi	r25, 0x02	; 2
+     d94:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+     d98:	21 c0       	rjmp	.+66     	; 0xddc <__vector_13+0x14a>
+					Bluetooth_TransmitString("Denied");
+					cnt = 0;
+				}
+			}
+			else{
+				Bluetooth_TransmitString("Choose from the list");
+     d9a:	8f e4       	ldi	r24, 0x4F	; 79
+     d9c:	92 e0       	ldi	r25, 0x02	; 2
+     d9e:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+     da2:	1c c0       	rjmp	.+56     	; 0xddc <__vector_13+0x14a>
+			}
+			break;
+			/* ********* Logout ********** */
+			case Logout:
+			if(Bluetooth_login == ADMIN_MODE){
+     da4:	21 30       	cpi	r18, 0x01	; 1
+     da6:	b1 f4       	brne	.+44     	; 0xdd4 <__vector_13+0x142>
+				Bluetooth_TransmitString("Logged Out");
+     da8:	8c e6       	ldi	r24, 0x6C	; 108
+     daa:	92 e0       	ldi	r25, 0x02	; 2
+     dac:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+				Bluetooth_New_line();
+     db0:	0e 94 81 07 	call	0xf02	; 0xf02 <Bluetooth_New_line>
+				Bluetooth_TransmitString("Admin mode");
+     db4:	8a e2       	ldi	r24, 0x2A	; 42
+     db6:	91 e0       	ldi	r25, 0x01	; 1
+     db8:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+				Bluetooth_New_line();
+     dbc:	0e 94 81 07 	call	0xf02	; 0xf02 <Bluetooth_New_line>
+				Bluetooth_TransmitString("Enter Password: ");
+     dc0:	85 e3       	ldi	r24, 0x35	; 53
+     dc2:	91 e0       	ldi	r25, 0x01	; 1
+     dc4:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+				LED_TurnOff(Bluetooth_LED_PORT);
+     dc8:	82 e1       	ldi	r24, 0x12	; 18
+     dca:	0e 94 88 08 	call	0x1110	; 0x1110 <LED_TurnOff>
+				Bluetooth_login = NO_MODE;
+     dce:	10 92 c6 02 	sts	0x02C6, r1	; 0x8002c6 <__data_end>
+     dd2:	04 c0       	rjmp	.+8      	; 0xddc <__vector_13+0x14a>
+			}
+			else{
+				Bluetooth_TransmitString("Choose from the list");
+     dd4:	8f e4       	ldi	r24, 0x4F	; 79
+     dd6:	92 e0       	ldi	r25, 0x02	; 2
+     dd8:	0e 94 7e 07 	call	0xefc	; 0xefc <Bluetooth_TransmitString>
+			default:
+			
+			break;
+		}
+	}
+}
+     ddc:	ff 91       	pop	r31
+     dde:	ef 91       	pop	r30
+     de0:	bf 91       	pop	r27
+     de2:	af 91       	pop	r26
+     de4:	9f 91       	pop	r25
+     de6:	8f 91       	pop	r24
+     de8:	7f 91       	pop	r23
+     dea:	6f 91       	pop	r22
+     dec:	5f 91       	pop	r21
+     dee:	4f 91       	pop	r20
+     df0:	3f 91       	pop	r19
+     df2:	2f 91       	pop	r18
+     df4:	0f 90       	pop	r0
+     df6:	0f be       	out	0x3f, r0	; 63
+     df8:	0f 90       	pop	r0
+     dfa:	1f 90       	pop	r1
+     dfc:	18 95       	reti
+
+00000dfe <Buz_DIR_OUT>:
+     dfe:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+     e02:	08 95       	ret
+
+00000e04 <Buz_TurnOn>:
+     e04:	61 e0       	ldi	r22, 0x01	; 1
+     e06:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     e0a:	08 95       	ret
+
+00000e0c <Buz_TurnOff>:
+     e0c:	60 e0       	ldi	r22, 0x00	; 0
+     e0e:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     e12:	08 95       	ret
+
+00000e14 <EEPROM_ReadByte>:
+     e14:	e1 99       	sbic	0x1c, 1	; 28
+     e16:	fe cf       	rjmp	.-4      	; 0xe14 <EEPROM_ReadByte>
+     e18:	9f bb       	out	0x1f, r25	; 31
+     e1a:	8e bb       	out	0x1e, r24	; 30
+     e1c:	8c b3       	in	r24, 0x1c	; 28
+     e1e:	81 60       	ori	r24, 0x01	; 1
+     e20:	8c bb       	out	0x1c, r24	; 28
+     e22:	8d b3       	in	r24, 0x1d	; 29
+     e24:	08 95       	ret
+
+00000e26 <EEPROM_ReadBlock>:
+     e26:	dc 01       	movw	r26, r24
+     e28:	e1 99       	sbic	0x1c, 1	; 28
+     e2a:	fe cf       	rjmp	.-4      	; 0xe28 <EEPROM_ReadBlock+0x2>
+     e2c:	20 e0       	ldi	r18, 0x00	; 0
+     e2e:	30 e0       	ldi	r19, 0x00	; 0
+     e30:	0f c0       	rjmp	.+30     	; 0xe50 <EEPROM_ReadBlock+0x2a>
+     e32:	f9 01       	movw	r30, r18
+     e34:	ea 0f       	add	r30, r26
+     e36:	fb 1f       	adc	r31, r27
+     e38:	ff bb       	out	0x1f, r31	; 31
+     e3a:	ee bb       	out	0x1e, r30	; 30
+     e3c:	9c b3       	in	r25, 0x1c	; 28
+     e3e:	91 60       	ori	r25, 0x01	; 1
+     e40:	9c bb       	out	0x1c, r25	; 28
+     e42:	fb 01       	movw	r30, r22
+     e44:	e2 0f       	add	r30, r18
+     e46:	f3 1f       	adc	r31, r19
+     e48:	9d b3       	in	r25, 0x1d	; 29
+     e4a:	90 83       	st	Z, r25
+     e4c:	2f 5f       	subi	r18, 0xFF	; 255
+     e4e:	3f 4f       	sbci	r19, 0xFF	; 255
+     e50:	24 17       	cp	r18, r20
+     e52:	35 07       	cpc	r19, r21
+     e54:	70 f3       	brcs	.-36     	; 0xe32 <EEPROM_ReadBlock+0xc>
+     e56:	08 95       	ret
+
+00000e58 <EEPROM_WriteByte>:
+     e58:	e1 99       	sbic	0x1c, 1	; 28
+     e5a:	fe cf       	rjmp	.-4      	; 0xe58 <EEPROM_WriteByte>
+     e5c:	9f bb       	out	0x1f, r25	; 31
+     e5e:	8e bb       	out	0x1e, r24	; 30
+     e60:	8c b3       	in	r24, 0x1c	; 28
+     e62:	81 60       	ori	r24, 0x01	; 1
+     e64:	8c bb       	out	0x1c, r24	; 28
+     e66:	8d b3       	in	r24, 0x1d	; 29
+     e68:	86 17       	cp	r24, r22
+     e6a:	39 f0       	breq	.+14     	; 0xe7a <EEPROM_WriteByte+0x22>
+     e6c:	6d bb       	out	0x1d, r22	; 29
+     e6e:	8c b3       	in	r24, 0x1c	; 28
+     e70:	84 60       	ori	r24, 0x04	; 4
+     e72:	8c bb       	out	0x1c, r24	; 28
+     e74:	8c b3       	in	r24, 0x1c	; 28
+     e76:	82 60       	ori	r24, 0x02	; 2
+     e78:	8c bb       	out	0x1c, r24	; 28
+     e7a:	08 95       	ret
+
+00000e7c <EEPROM_WriteBlock>:
+     e7c:	cf 93       	push	r28
+     e7e:	df 93       	push	r29
+     e80:	dc 01       	movw	r26, r24
+     e82:	ea 01       	movw	r28, r20
+     e84:	20 e0       	ldi	r18, 0x00	; 0
+     e86:	30 e0       	ldi	r19, 0x00	; 0
+     e88:	1a c0       	rjmp	.+52     	; 0xebe <EEPROM_WriteBlock+0x42>
+     e8a:	e1 99       	sbic	0x1c, 1	; 28
+     e8c:	fe cf       	rjmp	.-4      	; 0xe8a <EEPROM_WriteBlock+0xe>
+     e8e:	c9 01       	movw	r24, r18
+     e90:	8a 0f       	add	r24, r26
+     e92:	9b 1f       	adc	r25, r27
+     e94:	9f bb       	out	0x1f, r25	; 31
+     e96:	8e bb       	out	0x1e, r24	; 30
+     e98:	9c b3       	in	r25, 0x1c	; 28
+     e9a:	91 60       	ori	r25, 0x01	; 1
+     e9c:	9c bb       	out	0x1c, r25	; 28
+     e9e:	5d b3       	in	r21, 0x1d	; 29
+     ea0:	fb 01       	movw	r30, r22
+     ea2:	e2 0f       	add	r30, r18
+     ea4:	f3 1f       	adc	r31, r19
+     ea6:	90 81       	ld	r25, Z
+     ea8:	59 17       	cp	r21, r25
+     eaa:	39 f0       	breq	.+14     	; 0xeba <EEPROM_WriteBlock+0x3e>
+     eac:	9d bb       	out	0x1d, r25	; 29
+     eae:	9c b3       	in	r25, 0x1c	; 28
+     eb0:	94 60       	ori	r25, 0x04	; 4
+     eb2:	9c bb       	out	0x1c, r25	; 28
+     eb4:	9c b3       	in	r25, 0x1c	; 28
+     eb6:	92 60       	ori	r25, 0x02	; 2
+     eb8:	9c bb       	out	0x1c, r25	; 28
+     eba:	2f 5f       	subi	r18, 0xFF	; 255
+     ebc:	3f 4f       	sbci	r19, 0xFF	; 255
+     ebe:	2c 17       	cp	r18, r28
+     ec0:	3d 07       	cpc	r19, r29
+     ec2:	18 f3       	brcs	.-58     	; 0xe8a <EEPROM_WriteBlock+0xe>
+     ec4:	df 91       	pop	r29
+     ec6:	cf 91       	pop	r28
+     ec8:	08 95       	ret
+
+00000eca <Pass_Compare>:
+     eca:	dc 01       	movw	r26, r24
+     ecc:	90 e0       	ldi	r25, 0x00	; 0
+     ece:	0d c0       	rjmp	.+26     	; 0xeea <Pass_Compare+0x20>
+     ed0:	29 2f       	mov	r18, r25
+     ed2:	30 e0       	ldi	r19, 0x00	; 0
+     ed4:	fd 01       	movw	r30, r26
+     ed6:	e2 0f       	add	r30, r18
+     ed8:	f3 1f       	adc	r31, r19
+     eda:	50 81       	ld	r21, Z
+     edc:	fb 01       	movw	r30, r22
+     ede:	e2 0f       	add	r30, r18
+     ee0:	f3 1f       	adc	r31, r19
+     ee2:	20 81       	ld	r18, Z
+     ee4:	52 13       	cpse	r21, r18
+     ee6:	05 c0       	rjmp	.+10     	; 0xef2 <Pass_Compare+0x28>
+     ee8:	9f 5f       	subi	r25, 0xFF	; 255
+     eea:	94 17       	cp	r25, r20
+     eec:	88 f3       	brcs	.-30     	; 0xed0 <Pass_Compare+0x6>
+     eee:	81 e0       	ldi	r24, 0x01	; 1
+     ef0:	08 95       	ret
+     ef2:	80 e0       	ldi	r24, 0x00	; 0
+     ef4:	08 95       	ret
+
+00000ef6 <Bluetooth_Init>:
+     ef6:	0e 94 bb 0a 	call	0x1576	; 0x1576 <Uart_Init>
+     efa:	08 95       	ret
+
+00000efc <Bluetooth_TransmitString>:
+     efc:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+     f00:	08 95       	ret
+
+00000f02 <Bluetooth_New_line>:
+     f02:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+     f06:	08 95       	ret
+
+00000f08 <Bluetooth_T_Admin_menu>:
+     f08:	0e 94 df 0a 	call	0x15be	; 0x15be <Uart_T_Admin_menu>
+     f0c:	08 95       	ret
+
+00000f0e <GetKeyPress>:
+     f0e:	ef 92       	push	r14
+     f10:	ff 92       	push	r15
+     f12:	0f 93       	push	r16
+     f14:	1f 93       	push	r17
+     f16:	cf 93       	push	r28
+     f18:	df 93       	push	r29
+     f1a:	c0 e0       	ldi	r28, 0x00	; 0
+     f1c:	11 c0       	rjmp	.+34     	; 0xf40 <GetKeyPress+0x32>
+     f1e:	0c 2f       	mov	r16, r28
+     f20:	10 e0       	ldi	r17, 0x00	; 0
+     f22:	f8 01       	movw	r30, r16
+     f24:	eb 58       	subi	r30, 0x8B	; 139
+     f26:	ff 4f       	sbci	r31, 0xFF	; 255
+     f28:	61 e0       	ldi	r22, 0x01	; 1
+     f2a:	80 81       	ld	r24, Z
+     f2c:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     f30:	f8 01       	movw	r30, r16
+     f32:	ef 58       	subi	r30, 0x8F	; 143
+     f34:	ff 4f       	sbci	r31, 0xFF	; 255
+     f36:	61 e0       	ldi	r22, 0x01	; 1
+     f38:	80 81       	ld	r24, Z
+     f3a:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     f3e:	cf 5f       	subi	r28, 0xFF	; 255
+     f40:	c4 30       	cpi	r28, 0x04	; 4
+     f42:	68 f3       	brcs	.-38     	; 0xf1e <GetKeyPress+0x10>
+     f44:	d0 e0       	ldi	r29, 0x00	; 0
+     f46:	34 c0       	rjmp	.+104    	; 0xfb0 <GetKeyPress+0xa2>
+     f48:	ed 2e       	mov	r14, r29
+     f4a:	f1 2c       	mov	r15, r1
+     f4c:	f7 01       	movw	r30, r14
+     f4e:	eb 58       	subi	r30, 0x8B	; 139
+     f50:	ff 4f       	sbci	r31, 0xFF	; 255
+     f52:	60 e0       	ldi	r22, 0x00	; 0
+     f54:	80 81       	ld	r24, Z
+     f56:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     f5a:	c0 e0       	ldi	r28, 0x00	; 0
+     f5c:	1f c0       	rjmp	.+62     	; 0xf9c <GetKeyPress+0x8e>
+     f5e:	0c 2f       	mov	r16, r28
+     f60:	10 e0       	ldi	r17, 0x00	; 0
+     f62:	f8 01       	movw	r30, r16
+     f64:	ef 58       	subi	r30, 0x8F	; 143
+     f66:	ff 4f       	sbci	r31, 0xFF	; 255
+     f68:	80 81       	ld	r24, Z
+     f6a:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_ReadChannel>
+     f6e:	81 11       	cpse	r24, r1
+     f70:	14 c0       	rjmp	.+40     	; 0xf9a <GetKeyPress+0x8c>
+     f72:	f8 01       	movw	r30, r16
+     f74:	ef 58       	subi	r30, 0x8F	; 143
+     f76:	ff 4f       	sbci	r31, 0xFF	; 255
+     f78:	80 81       	ld	r24, Z
+     f7a:	0e 94 17 09 	call	0x122e	; 0x122e <DIO_ReadChannel>
+     f7e:	88 23       	and	r24, r24
+     f80:	c1 f3       	breq	.-16     	; 0xf72 <GetKeyPress+0x64>
+     f82:	c7 01       	movw	r24, r14
+     f84:	88 0f       	add	r24, r24
+     f86:	99 1f       	adc	r25, r25
+     f88:	88 0f       	add	r24, r24
+     f8a:	99 1f       	adc	r25, r25
+     f8c:	8f 59       	subi	r24, 0x9F	; 159
+     f8e:	9f 4f       	sbci	r25, 0xFF	; 255
+     f90:	fc 01       	movw	r30, r24
+     f92:	e0 0f       	add	r30, r16
+     f94:	f1 1f       	adc	r31, r17
+     f96:	80 81       	ld	r24, Z
+     f98:	0e c0       	rjmp	.+28     	; 0xfb6 <GetKeyPress+0xa8>
+     f9a:	cf 5f       	subi	r28, 0xFF	; 255
+     f9c:	c4 30       	cpi	r28, 0x04	; 4
+     f9e:	f8 f2       	brcs	.-66     	; 0xf5e <GetKeyPress+0x50>
+     fa0:	f7 01       	movw	r30, r14
+     fa2:	eb 58       	subi	r30, 0x8B	; 139
+     fa4:	ff 4f       	sbci	r31, 0xFF	; 255
+     fa6:	61 e0       	ldi	r22, 0x01	; 1
+     fa8:	80 81       	ld	r24, Z
+     faa:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     fae:	df 5f       	subi	r29, 0xFF	; 255
+     fb0:	d4 30       	cpi	r29, 0x04	; 4
+     fb2:	50 f2       	brcs	.-108    	; 0xf48 <GetKeyPress+0x3a>
+     fb4:	80 e0       	ldi	r24, 0x00	; 0
+     fb6:	df 91       	pop	r29
+     fb8:	cf 91       	pop	r28
+     fba:	1f 91       	pop	r17
+     fbc:	0f 91       	pop	r16
+     fbe:	ff 90       	pop	r15
+     fc0:	ef 90       	pop	r14
+     fc2:	08 95       	ret
+
+00000fc4 <Enable_CLK>:
+	_delay_us(60);
+	
+}
+
+void Enable_CLK(void){
+	DIO_WriteChannel(LCD_E,STD_Low);
+     fc4:	60 e0       	ldi	r22, 0x00	; 0
+     fc6:	8b e0       	ldi	r24, 0x0B	; 11
+     fc8:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     fcc:	8f e8       	ldi	r24, 0x8F	; 143
+     fce:	91 e0       	ldi	r25, 0x01	; 1
+     fd0:	01 97       	sbiw	r24, 0x01	; 1
+     fd2:	f1 f7       	brne	.-4      	; 0xfd0 <Enable_CLK+0xc>
+     fd4:	00 c0       	rjmp	.+0      	; 0xfd6 <Enable_CLK+0x12>
+     fd6:	00 00       	nop
+	_delay_us(100);
+	DIO_WriteChannel(LCD_E,STD_High);
+     fd8:	61 e0       	ldi	r22, 0x01	; 1
+     fda:	8b e0       	ldi	r24, 0x0B	; 11
+     fdc:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     fe0:	8f e8       	ldi	r24, 0x8F	; 143
+     fe2:	91 e0       	ldi	r25, 0x01	; 1
+     fe4:	01 97       	sbiw	r24, 0x01	; 1
+     fe6:	f1 f7       	brne	.-4      	; 0xfe4 <Enable_CLK+0x20>
+     fe8:	00 c0       	rjmp	.+0      	; 0xfea <Enable_CLK+0x26>
+     fea:	00 00       	nop
+	_delay_us(100);
+	DIO_WriteChannel(LCD_E,STD_Low);
+     fec:	60 e0       	ldi	r22, 0x00	; 0
+     fee:	8b e0       	ldi	r24, 0x0B	; 11
+     ff0:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+     ff4:	08 95       	ret
+
+00000ff6 <LCD_Cmd>:
+
+}
+
+void LCD_Cmd(Uint8 cmd){
+     ff6:	cf 93       	push	r28
+     ff8:	c8 2f       	mov	r28, r24
+
+	DIO_WriteChannel(LCD_RS,STD_Low);//Select command Register
+     ffa:	60 e0       	ldi	r22, 0x00	; 0
+     ffc:	89 e0       	ldi	r24, 0x09	; 9
+     ffe:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+	DIO_WritePort(LCD_DataPort,cmd);
+    1002:	6c 2f       	mov	r22, r28
+    1004:	80 e0       	ldi	r24, 0x00	; 0
+    1006:	0e 94 4f 09 	call	0x129e	; 0x129e <DIO_WritePort>
+	Enable_CLK();
+    100a:	0e 94 e2 07 	call	0xfc4	; 0xfc4 <Enable_CLK>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    100e:	8f e1       	ldi	r24, 0x1F	; 31
+    1010:	9e e4       	ldi	r25, 0x4E	; 78
+    1012:	01 97       	sbiw	r24, 0x01	; 1
+    1014:	f1 f7       	brne	.-4      	; 0x1012 <LCD_Cmd+0x1c>
+    1016:	00 c0       	rjmp	.+0      	; 0x1018 <LCD_Cmd+0x22>
+    1018:	00 00       	nop
+	_delay_ms(5);
+}
+    101a:	cf 91       	pop	r28
+    101c:	08 95       	ret
+
+0000101e <LCD_Init>:
+ */ 
+
+#include "LCD.h"
+
+void LCD_Init(void){
+	DIO_WriteChannel(LCD_RW,STD_Low);	//RW SET LOW (WRITE)
+    101e:	60 e0       	ldi	r22, 0x00	; 0
+    1020:	8a e0       	ldi	r24, 0x0A	; 10
+    1022:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+	DIO_WriteChannel(LCD_E,STD_High);	//Activates the enable pin
+    1026:	61 e0       	ldi	r22, 0x01	; 1
+    1028:	8b e0       	ldi	r24, 0x0B	; 11
+    102a:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+	
+	LCD_Cmd(EIGHT_BIT_MODE);	//Set Function 8-Bit & 2Line & 5*8 Dots
+    102e:	88 e3       	ldi	r24, 0x38	; 56
+    1030:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    1034:	8f ee       	ldi	r24, 0xEF	; 239
+    1036:	90 e0       	ldi	r25, 0x00	; 0
+    1038:	01 97       	sbiw	r24, 0x01	; 1
+    103a:	f1 f7       	brne	.-4      	; 0x1038 <LCD_Init+0x1a>
+    103c:	00 c0       	rjmp	.+0      	; 0x103e <LCD_Init+0x20>
+    103e:	00 00       	nop
+	_delay_us(60);
+	LCD_Cmd(DISPLAY_ON_CURSOR_OFF_BLNK);
+    1040:	8e e0       	ldi	r24, 0x0E	; 14
+    1042:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+    1046:	8f ee       	ldi	r24, 0xEF	; 239
+    1048:	90 e0       	ldi	r25, 0x00	; 0
+    104a:	01 97       	sbiw	r24, 0x01	; 1
+    104c:	f1 f7       	brne	.-4      	; 0x104a <LCD_Init+0x2c>
+    104e:	00 c0       	rjmp	.+0      	; 0x1050 <LCD_Init+0x32>
+    1050:	00 00       	nop
+	_delay_us(60);
+	LCD_Cmd(ENTRY_MODE);	
+    1052:	86 e0       	ldi	r24, 0x06	; 6
+    1054:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+    1058:	9a e1       	ldi	r25, 0x1A	; 26
+    105a:	9a 95       	dec	r25
+    105c:	f1 f7       	brne	.-4      	; 0x105a <LCD_Init+0x3c>
+    105e:	00 c0       	rjmp	.+0      	; 0x1060 <LCD_Init+0x42>
+	_delay_us(5);
+	LCD_Cmd(CLR_SCREEN);	
+    1060:	81 e0       	ldi	r24, 0x01	; 1
+    1062:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+    1066:	8f ee       	ldi	r24, 0xEF	; 239
+    1068:	90 e0       	ldi	r25, 0x00	; 0
+    106a:	01 97       	sbiw	r24, 0x01	; 1
+    106c:	f1 f7       	brne	.-4      	; 0x106a <LCD_Init+0x4c>
+    106e:	00 c0       	rjmp	.+0      	; 0x1070 <LCD_Init+0x52>
+    1070:	00 00       	nop
+	_delay_us(60);
+	LCD_Cmd(Start_position);
+    1072:	80 e8       	ldi	r24, 0x80	; 128
+    1074:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+    1078:	8f ee       	ldi	r24, 0xEF	; 239
+    107a:	90 e0       	ldi	r25, 0x00	; 0
+    107c:	01 97       	sbiw	r24, 0x01	; 1
+    107e:	f1 f7       	brne	.-4      	; 0x107c <LCD_Init+0x5e>
+    1080:	00 c0       	rjmp	.+0      	; 0x1082 <LCD_Init+0x64>
+    1082:	00 00       	nop
+    1084:	08 95       	ret
+
+00001086 <LCD_Char>:
+	DIO_WriteChannel(LCD_RS,STD_Low);//Select command Register
+	DIO_WritePort(LCD_DataPort,cmd);
+	Enable_CLK();
+	_delay_ms(5);
+}
+void LCD_Char(Uint8 data){
+    1086:	cf 93       	push	r28
+    1088:	c8 2f       	mov	r28, r24
+
+	DIO_WriteChannel(LCD_RS,STD_High);	//Select Data Register
+    108a:	61 e0       	ldi	r22, 0x01	; 1
+    108c:	89 e0       	ldi	r24, 0x09	; 9
+    108e:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+	DIO_WritePort(LCD_DataPort,data);
+    1092:	6c 2f       	mov	r22, r28
+    1094:	80 e0       	ldi	r24, 0x00	; 0
+    1096:	0e 94 4f 09 	call	0x129e	; 0x129e <DIO_WritePort>
+	Enable_CLK();
+    109a:	0e 94 e2 07 	call	0xfc4	; 0xfc4 <Enable_CLK>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    109e:	8f e1       	ldi	r24, 0x1F	; 31
+    10a0:	9e e4       	ldi	r25, 0x4E	; 78
+    10a2:	01 97       	sbiw	r24, 0x01	; 1
+    10a4:	f1 f7       	brne	.-4      	; 0x10a2 <LCD_Char+0x1c>
+    10a6:	00 c0       	rjmp	.+0      	; 0x10a8 <LCD_Char+0x22>
+    10a8:	00 00       	nop
+	_delay_ms(5);
+}
+    10aa:	cf 91       	pop	r28
+    10ac:	08 95       	ret
+
+000010ae <LCD_String>:
+void LCD_String(int8 * string){
+    10ae:	0f 93       	push	r16
+    10b0:	1f 93       	push	r17
+    10b2:	cf 93       	push	r28
+    10b4:	8c 01       	movw	r16, r24
+	Uint8 i = 0;
+    10b6:	c0 e0       	ldi	r28, 0x00	; 0
+	while (string[i] != '\0')
+    10b8:	03 c0       	rjmp	.+6      	; 0x10c0 <LCD_String+0x12>
+	{
+		LCD_Char(string[i]);
+    10ba:	0e 94 43 08 	call	0x1086	; 0x1086 <LCD_Char>
+		i++;
+    10be:	cf 5f       	subi	r28, 0xFF	; 255
+	Enable_CLK();
+	_delay_ms(5);
+}
+void LCD_String(int8 * string){
+	Uint8 i = 0;
+	while (string[i] != '\0')
+    10c0:	f8 01       	movw	r30, r16
+    10c2:	ec 0f       	add	r30, r28
+    10c4:	f1 1d       	adc	r31, r1
+    10c6:	80 81       	ld	r24, Z
+    10c8:	81 11       	cpse	r24, r1
+    10ca:	f7 cf       	rjmp	.-18     	; 0x10ba <LCD_String+0xc>
+	{
+		LCD_Char(string[i]);
+		i++;
+	}
+}
+    10cc:	cf 91       	pop	r28
+    10ce:	1f 91       	pop	r17
+    10d0:	0f 91       	pop	r16
+    10d2:	08 95       	ret
+
+000010d4 <LCD_SetPos>:
+
+void LCD_SetPos(Uint8 LineNo,Uint8 Pos){
+	switch(LineNo){
+    10d4:	81 30       	cpi	r24, 0x01	; 1
+    10d6:	19 f0       	breq	.+6      	; 0x10de <LCD_SetPos+0xa>
+    10d8:	82 30       	cpi	r24, 0x02	; 2
+    10da:	31 f0       	breq	.+12     	; 0x10e8 <LCD_SetPos+0x14>
+    10dc:	0a c0       	rjmp	.+20     	; 0x10f2 <LCD_SetPos+0x1e>
+		case 1:
+		if(Pos >= 0 || Pos < 16){
+			LCD_Cmd(0x80 + Pos);
+    10de:	80 e8       	ldi	r24, 0x80	; 128
+    10e0:	86 0f       	add	r24, r22
+    10e2:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+		}	
+		break;
+    10e6:	08 95       	ret
+		case 2:
+		if(Pos >= 0 || Pos < 16){
+			LCD_Cmd(0xC0 + Pos);
+    10e8:	80 ec       	ldi	r24, 0xC0	; 192
+    10ea:	86 0f       	add	r24, r22
+    10ec:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+		}
+		break;
+    10f0:	08 95       	ret
+		default:
+		LCD_Cmd(0x80);
+    10f2:	80 e8       	ldi	r24, 0x80	; 128
+    10f4:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+    10f8:	08 95       	ret
+
+000010fa <LCD_Clear>:
+		break;
+	}
+}
+
+void LCD_Clear(void){
+	LCD_Cmd(CLR_SCREEN);
+    10fa:	81 e0       	ldi	r24, 0x01	; 1
+    10fc:	0e 94 fb 07 	call	0xff6	; 0xff6 <LCD_Cmd>
+    1100:	08 95       	ret
+
+00001102 <LED_DIR_OUT>:
+    1102:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    1106:	08 95       	ret
+
+00001108 <LED_TurnOn>:
+    1108:	61 e0       	ldi	r22, 0x01	; 1
+    110a:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+    110e:	08 95       	ret
+
+00001110 <LED_TurnOff>:
+    1110:	60 e0       	ldi	r22, 0x00	; 0
+    1112:	0e 94 95 08 	call	0x112a	; 0x112a <DIO_WriteChannel>
+    1116:	08 95       	ret
+
+00001118 <main>:
+
+#include "APP.h"
+
+int main(){
+	
+	APP_init();
+    1118:	0e 94 75 00 	call	0xea	; 0xea <APP_init>
+	APP_First_start();
+    111c:	0e 94 a9 00 	call	0x152	; 0x152 <APP_First_start>
+
+	while(1){
+		APP_Start_login();
+    1120:	0e 94 a6 01 	call	0x34c	; 0x34c <APP_Start_login>
+		APP_Start_menu();
+    1124:	0e 94 23 04 	call	0x846	; 0x846 <APP_Start_menu>
+    1128:	fb cf       	rjmp	.-10     	; 0x1120 <main+0x8>
+
+0000112a <DIO_WriteChannel>:
+    112a:	98 2f       	mov	r25, r24
+    112c:	96 95       	lsr	r25
+    112e:	96 95       	lsr	r25
+    1130:	96 95       	lsr	r25
+    1132:	87 70       	andi	r24, 0x07	; 7
+    1134:	91 30       	cpi	r25, 0x01	; 1
+    1136:	21 f1       	breq	.+72     	; 0x1180 <DIO_WriteChannel+0x56>
+    1138:	30 f0       	brcs	.+12     	; 0x1146 <DIO_WriteChannel+0x1c>
+    113a:	92 30       	cpi	r25, 0x02	; 2
+    113c:	f1 f1       	breq	.+124    	; 0x11ba <DIO_WriteChannel+0x90>
+    113e:	93 30       	cpi	r25, 0x03	; 3
+    1140:	09 f4       	brne	.+2      	; 0x1144 <DIO_WriteChannel+0x1a>
+    1142:	58 c0       	rjmp	.+176    	; 0x11f4 <DIO_WriteChannel+0xca>
+    1144:	08 95       	ret
+    1146:	61 30       	cpi	r22, 0x01	; 1
+    1148:	69 f4       	brne	.+26     	; 0x1164 <DIO_WriteChannel+0x3a>
+    114a:	4b b3       	in	r20, 0x1b	; 27
+    114c:	21 e0       	ldi	r18, 0x01	; 1
+    114e:	30 e0       	ldi	r19, 0x00	; 0
+    1150:	b9 01       	movw	r22, r18
+    1152:	02 c0       	rjmp	.+4      	; 0x1158 <DIO_WriteChannel+0x2e>
+    1154:	66 0f       	add	r22, r22
+    1156:	77 1f       	adc	r23, r23
+    1158:	8a 95       	dec	r24
+    115a:	e2 f7       	brpl	.-8      	; 0x1154 <DIO_WriteChannel+0x2a>
+    115c:	cb 01       	movw	r24, r22
+    115e:	84 2b       	or	r24, r20
+    1160:	8b bb       	out	0x1b, r24	; 27
+    1162:	08 95       	ret
+    1164:	4b b3       	in	r20, 0x1b	; 27
+    1166:	21 e0       	ldi	r18, 0x01	; 1
+    1168:	30 e0       	ldi	r19, 0x00	; 0
+    116a:	b9 01       	movw	r22, r18
+    116c:	02 c0       	rjmp	.+4      	; 0x1172 <DIO_WriteChannel+0x48>
+    116e:	66 0f       	add	r22, r22
+    1170:	77 1f       	adc	r23, r23
+    1172:	8a 95       	dec	r24
+    1174:	e2 f7       	brpl	.-8      	; 0x116e <DIO_WriteChannel+0x44>
+    1176:	cb 01       	movw	r24, r22
+    1178:	80 95       	com	r24
+    117a:	84 23       	and	r24, r20
+    117c:	8b bb       	out	0x1b, r24	; 27
+    117e:	08 95       	ret
+    1180:	61 30       	cpi	r22, 0x01	; 1
+    1182:	69 f4       	brne	.+26     	; 0x119e <DIO_WriteChannel+0x74>
+    1184:	48 b3       	in	r20, 0x18	; 24
+    1186:	21 e0       	ldi	r18, 0x01	; 1
+    1188:	30 e0       	ldi	r19, 0x00	; 0
+    118a:	b9 01       	movw	r22, r18
+    118c:	02 c0       	rjmp	.+4      	; 0x1192 <DIO_WriteChannel+0x68>
+    118e:	66 0f       	add	r22, r22
+    1190:	77 1f       	adc	r23, r23
+    1192:	8a 95       	dec	r24
+    1194:	e2 f7       	brpl	.-8      	; 0x118e <DIO_WriteChannel+0x64>
+    1196:	cb 01       	movw	r24, r22
+    1198:	84 2b       	or	r24, r20
+    119a:	88 bb       	out	0x18, r24	; 24
+    119c:	08 95       	ret
+    119e:	48 b3       	in	r20, 0x18	; 24
+    11a0:	21 e0       	ldi	r18, 0x01	; 1
+    11a2:	30 e0       	ldi	r19, 0x00	; 0
+    11a4:	b9 01       	movw	r22, r18
+    11a6:	02 c0       	rjmp	.+4      	; 0x11ac <DIO_WriteChannel+0x82>
+    11a8:	66 0f       	add	r22, r22
+    11aa:	77 1f       	adc	r23, r23
+    11ac:	8a 95       	dec	r24
+    11ae:	e2 f7       	brpl	.-8      	; 0x11a8 <DIO_WriteChannel+0x7e>
+    11b0:	cb 01       	movw	r24, r22
+    11b2:	80 95       	com	r24
+    11b4:	84 23       	and	r24, r20
+    11b6:	88 bb       	out	0x18, r24	; 24
+    11b8:	08 95       	ret
+    11ba:	61 30       	cpi	r22, 0x01	; 1
+    11bc:	69 f4       	brne	.+26     	; 0x11d8 <DIO_WriteChannel+0xae>
+    11be:	45 b3       	in	r20, 0x15	; 21
+    11c0:	21 e0       	ldi	r18, 0x01	; 1
+    11c2:	30 e0       	ldi	r19, 0x00	; 0
+    11c4:	b9 01       	movw	r22, r18
+    11c6:	02 c0       	rjmp	.+4      	; 0x11cc <DIO_WriteChannel+0xa2>
+    11c8:	66 0f       	add	r22, r22
+    11ca:	77 1f       	adc	r23, r23
+    11cc:	8a 95       	dec	r24
+    11ce:	e2 f7       	brpl	.-8      	; 0x11c8 <DIO_WriteChannel+0x9e>
+    11d0:	cb 01       	movw	r24, r22
+    11d2:	84 2b       	or	r24, r20
+    11d4:	85 bb       	out	0x15, r24	; 21
+    11d6:	08 95       	ret
+    11d8:	45 b3       	in	r20, 0x15	; 21
+    11da:	21 e0       	ldi	r18, 0x01	; 1
+    11dc:	30 e0       	ldi	r19, 0x00	; 0
+    11de:	b9 01       	movw	r22, r18
+    11e0:	02 c0       	rjmp	.+4      	; 0x11e6 <DIO_WriteChannel+0xbc>
+    11e2:	66 0f       	add	r22, r22
+    11e4:	77 1f       	adc	r23, r23
+    11e6:	8a 95       	dec	r24
+    11e8:	e2 f7       	brpl	.-8      	; 0x11e2 <DIO_WriteChannel+0xb8>
+    11ea:	cb 01       	movw	r24, r22
+    11ec:	80 95       	com	r24
+    11ee:	84 23       	and	r24, r20
+    11f0:	85 bb       	out	0x15, r24	; 21
+    11f2:	08 95       	ret
+    11f4:	61 30       	cpi	r22, 0x01	; 1
+    11f6:	69 f4       	brne	.+26     	; 0x1212 <DIO_WriteChannel+0xe8>
+    11f8:	42 b3       	in	r20, 0x12	; 18
+    11fa:	21 e0       	ldi	r18, 0x01	; 1
+    11fc:	30 e0       	ldi	r19, 0x00	; 0
+    11fe:	b9 01       	movw	r22, r18
+    1200:	02 c0       	rjmp	.+4      	; 0x1206 <DIO_WriteChannel+0xdc>
+    1202:	66 0f       	add	r22, r22
+    1204:	77 1f       	adc	r23, r23
+    1206:	8a 95       	dec	r24
+    1208:	e2 f7       	brpl	.-8      	; 0x1202 <DIO_WriteChannel+0xd8>
+    120a:	cb 01       	movw	r24, r22
+    120c:	84 2b       	or	r24, r20
+    120e:	82 bb       	out	0x12, r24	; 18
+    1210:	08 95       	ret
+    1212:	42 b3       	in	r20, 0x12	; 18
+    1214:	21 e0       	ldi	r18, 0x01	; 1
+    1216:	30 e0       	ldi	r19, 0x00	; 0
+    1218:	b9 01       	movw	r22, r18
+    121a:	02 c0       	rjmp	.+4      	; 0x1220 <DIO_WriteChannel+0xf6>
+    121c:	66 0f       	add	r22, r22
+    121e:	77 1f       	adc	r23, r23
+    1220:	8a 95       	dec	r24
+    1222:	e2 f7       	brpl	.-8      	; 0x121c <DIO_WriteChannel+0xf2>
+    1224:	cb 01       	movw	r24, r22
+    1226:	80 95       	com	r24
+    1228:	84 23       	and	r24, r20
+    122a:	82 bb       	out	0x12, r24	; 18
+    122c:	08 95       	ret
+
+0000122e <DIO_ReadChannel>:
+    122e:	98 2f       	mov	r25, r24
+    1230:	96 95       	lsr	r25
+    1232:	96 95       	lsr	r25
+    1234:	96 95       	lsr	r25
+    1236:	48 2f       	mov	r20, r24
+    1238:	47 70       	andi	r20, 0x07	; 7
+    123a:	91 30       	cpi	r25, 0x01	; 1
+    123c:	81 f0       	breq	.+32     	; 0x125e <DIO_ReadChannel+0x30>
+    123e:	28 f0       	brcs	.+10     	; 0x124a <DIO_ReadChannel+0x1c>
+    1240:	92 30       	cpi	r25, 0x02	; 2
+    1242:	b9 f0       	breq	.+46     	; 0x1272 <DIO_ReadChannel+0x44>
+    1244:	93 30       	cpi	r25, 0x03	; 3
+    1246:	f9 f0       	breq	.+62     	; 0x1286 <DIO_ReadChannel+0x58>
+    1248:	28 c0       	rjmp	.+80     	; 0x129a <DIO_ReadChannel+0x6c>
+    124a:	99 b3       	in	r25, 0x19	; 25
+    124c:	89 2f       	mov	r24, r25
+    124e:	90 e0       	ldi	r25, 0x00	; 0
+    1250:	02 c0       	rjmp	.+4      	; 0x1256 <DIO_ReadChannel+0x28>
+    1252:	95 95       	asr	r25
+    1254:	87 95       	ror	r24
+    1256:	4a 95       	dec	r20
+    1258:	e2 f7       	brpl	.-8      	; 0x1252 <DIO_ReadChannel+0x24>
+    125a:	81 70       	andi	r24, 0x01	; 1
+    125c:	08 95       	ret
+    125e:	26 b3       	in	r18, 0x16	; 22
+    1260:	30 e0       	ldi	r19, 0x00	; 0
+    1262:	c9 01       	movw	r24, r18
+    1264:	02 c0       	rjmp	.+4      	; 0x126a <DIO_ReadChannel+0x3c>
+    1266:	95 95       	asr	r25
+    1268:	87 95       	ror	r24
+    126a:	4a 95       	dec	r20
+    126c:	e2 f7       	brpl	.-8      	; 0x1266 <DIO_ReadChannel+0x38>
+    126e:	81 70       	andi	r24, 0x01	; 1
+    1270:	08 95       	ret
+    1272:	23 b3       	in	r18, 0x13	; 19
+    1274:	30 e0       	ldi	r19, 0x00	; 0
+    1276:	c9 01       	movw	r24, r18
+    1278:	02 c0       	rjmp	.+4      	; 0x127e <DIO_ReadChannel+0x50>
+    127a:	95 95       	asr	r25
+    127c:	87 95       	ror	r24
+    127e:	4a 95       	dec	r20
+    1280:	e2 f7       	brpl	.-8      	; 0x127a <DIO_ReadChannel+0x4c>
+    1282:	81 70       	andi	r24, 0x01	; 1
+    1284:	08 95       	ret
+    1286:	20 b3       	in	r18, 0x10	; 16
+    1288:	30 e0       	ldi	r19, 0x00	; 0
+    128a:	c9 01       	movw	r24, r18
+    128c:	02 c0       	rjmp	.+4      	; 0x1292 <DIO_ReadChannel+0x64>
+    128e:	95 95       	asr	r25
+    1290:	87 95       	ror	r24
+    1292:	4a 95       	dec	r20
+    1294:	e2 f7       	brpl	.-8      	; 0x128e <DIO_ReadChannel+0x60>
+    1296:	81 70       	andi	r24, 0x01	; 1
+    1298:	08 95       	ret
+    129a:	80 e0       	ldi	r24, 0x00	; 0
+    129c:	08 95       	ret
+
+0000129e <DIO_WritePort>:
+    129e:	81 30       	cpi	r24, 0x01	; 1
+    12a0:	41 f0       	breq	.+16     	; 0x12b2 <DIO_WritePort+0x14>
+    12a2:	28 f0       	brcs	.+10     	; 0x12ae <DIO_WritePort+0x10>
+    12a4:	82 30       	cpi	r24, 0x02	; 2
+    12a6:	39 f0       	breq	.+14     	; 0x12b6 <DIO_WritePort+0x18>
+    12a8:	83 30       	cpi	r24, 0x03	; 3
+    12aa:	39 f0       	breq	.+14     	; 0x12ba <DIO_WritePort+0x1c>
+    12ac:	08 95       	ret
+    12ae:	6b bb       	out	0x1b, r22	; 27
+    12b0:	08 95       	ret
+    12b2:	68 bb       	out	0x18, r22	; 24
+    12b4:	08 95       	ret
+    12b6:	65 bb       	out	0x15, r22	; 21
+    12b8:	08 95       	ret
+    12ba:	62 bb       	out	0x12, r22	; 18
+    12bc:	08 95       	ret
+
+000012be <DIO_ConfigureChannel>:
+    12be:	98 2f       	mov	r25, r24
+    12c0:	96 95       	lsr	r25
+    12c2:	96 95       	lsr	r25
+    12c4:	96 95       	lsr	r25
+    12c6:	87 70       	andi	r24, 0x07	; 7
+    12c8:	91 30       	cpi	r25, 0x01	; 1
+    12ca:	21 f1       	breq	.+72     	; 0x1314 <DIO_ConfigureChannel+0x56>
+    12cc:	30 f0       	brcs	.+12     	; 0x12da <DIO_ConfigureChannel+0x1c>
+    12ce:	92 30       	cpi	r25, 0x02	; 2
+    12d0:	f1 f1       	breq	.+124    	; 0x134e <DIO_ConfigureChannel+0x90>
+    12d2:	93 30       	cpi	r25, 0x03	; 3
+    12d4:	09 f4       	brne	.+2      	; 0x12d8 <DIO_ConfigureChannel+0x1a>
+    12d6:	58 c0       	rjmp	.+176    	; 0x1388 <DIO_ConfigureChannel+0xca>
+    12d8:	08 95       	ret
+    12da:	61 30       	cpi	r22, 0x01	; 1
+    12dc:	69 f4       	brne	.+26     	; 0x12f8 <DIO_ConfigureChannel+0x3a>
+    12de:	4a b3       	in	r20, 0x1a	; 26
+    12e0:	21 e0       	ldi	r18, 0x01	; 1
+    12e2:	30 e0       	ldi	r19, 0x00	; 0
+    12e4:	b9 01       	movw	r22, r18
+    12e6:	02 c0       	rjmp	.+4      	; 0x12ec <DIO_ConfigureChannel+0x2e>
+    12e8:	66 0f       	add	r22, r22
+    12ea:	77 1f       	adc	r23, r23
+    12ec:	8a 95       	dec	r24
+    12ee:	e2 f7       	brpl	.-8      	; 0x12e8 <DIO_ConfigureChannel+0x2a>
+    12f0:	cb 01       	movw	r24, r22
+    12f2:	84 2b       	or	r24, r20
+    12f4:	8a bb       	out	0x1a, r24	; 26
+    12f6:	08 95       	ret
+    12f8:	4a b3       	in	r20, 0x1a	; 26
+    12fa:	21 e0       	ldi	r18, 0x01	; 1
+    12fc:	30 e0       	ldi	r19, 0x00	; 0
+    12fe:	b9 01       	movw	r22, r18
+    1300:	02 c0       	rjmp	.+4      	; 0x1306 <DIO_ConfigureChannel+0x48>
+    1302:	66 0f       	add	r22, r22
+    1304:	77 1f       	adc	r23, r23
+    1306:	8a 95       	dec	r24
+    1308:	e2 f7       	brpl	.-8      	; 0x1302 <DIO_ConfigureChannel+0x44>
+    130a:	cb 01       	movw	r24, r22
+    130c:	80 95       	com	r24
+    130e:	84 23       	and	r24, r20
+    1310:	8a bb       	out	0x1a, r24	; 26
+    1312:	08 95       	ret
+    1314:	61 30       	cpi	r22, 0x01	; 1
+    1316:	69 f4       	brne	.+26     	; 0x1332 <DIO_ConfigureChannel+0x74>
+    1318:	47 b3       	in	r20, 0x17	; 23
+    131a:	21 e0       	ldi	r18, 0x01	; 1
+    131c:	30 e0       	ldi	r19, 0x00	; 0
+    131e:	b9 01       	movw	r22, r18
+    1320:	02 c0       	rjmp	.+4      	; 0x1326 <DIO_ConfigureChannel+0x68>
+    1322:	66 0f       	add	r22, r22
+    1324:	77 1f       	adc	r23, r23
+    1326:	8a 95       	dec	r24
+    1328:	e2 f7       	brpl	.-8      	; 0x1322 <DIO_ConfigureChannel+0x64>
+    132a:	cb 01       	movw	r24, r22
+    132c:	84 2b       	or	r24, r20
+    132e:	87 bb       	out	0x17, r24	; 23
+    1330:	08 95       	ret
+    1332:	47 b3       	in	r20, 0x17	; 23
+    1334:	21 e0       	ldi	r18, 0x01	; 1
+    1336:	30 e0       	ldi	r19, 0x00	; 0
+    1338:	b9 01       	movw	r22, r18
+    133a:	02 c0       	rjmp	.+4      	; 0x1340 <DIO_ConfigureChannel+0x82>
+    133c:	66 0f       	add	r22, r22
+    133e:	77 1f       	adc	r23, r23
+    1340:	8a 95       	dec	r24
+    1342:	e2 f7       	brpl	.-8      	; 0x133c <DIO_ConfigureChannel+0x7e>
+    1344:	cb 01       	movw	r24, r22
+    1346:	80 95       	com	r24
+    1348:	84 23       	and	r24, r20
+    134a:	87 bb       	out	0x17, r24	; 23
+    134c:	08 95       	ret
+    134e:	61 30       	cpi	r22, 0x01	; 1
+    1350:	69 f4       	brne	.+26     	; 0x136c <DIO_ConfigureChannel+0xae>
+    1352:	44 b3       	in	r20, 0x14	; 20
+    1354:	21 e0       	ldi	r18, 0x01	; 1
+    1356:	30 e0       	ldi	r19, 0x00	; 0
+    1358:	b9 01       	movw	r22, r18
+    135a:	02 c0       	rjmp	.+4      	; 0x1360 <DIO_ConfigureChannel+0xa2>
+    135c:	66 0f       	add	r22, r22
+    135e:	77 1f       	adc	r23, r23
+    1360:	8a 95       	dec	r24
+    1362:	e2 f7       	brpl	.-8      	; 0x135c <DIO_ConfigureChannel+0x9e>
+    1364:	cb 01       	movw	r24, r22
+    1366:	84 2b       	or	r24, r20
+    1368:	84 bb       	out	0x14, r24	; 20
+    136a:	08 95       	ret
+    136c:	44 b3       	in	r20, 0x14	; 20
+    136e:	21 e0       	ldi	r18, 0x01	; 1
+    1370:	30 e0       	ldi	r19, 0x00	; 0
+    1372:	b9 01       	movw	r22, r18
+    1374:	02 c0       	rjmp	.+4      	; 0x137a <DIO_ConfigureChannel+0xbc>
+    1376:	66 0f       	add	r22, r22
+    1378:	77 1f       	adc	r23, r23
+    137a:	8a 95       	dec	r24
+    137c:	e2 f7       	brpl	.-8      	; 0x1376 <DIO_ConfigureChannel+0xb8>
+    137e:	cb 01       	movw	r24, r22
+    1380:	80 95       	com	r24
+    1382:	84 23       	and	r24, r20
+    1384:	84 bb       	out	0x14, r24	; 20
+    1386:	08 95       	ret
+    1388:	61 30       	cpi	r22, 0x01	; 1
+    138a:	69 f4       	brne	.+26     	; 0x13a6 <DIO_ConfigureChannel+0xe8>
+    138c:	41 b3       	in	r20, 0x11	; 17
+    138e:	21 e0       	ldi	r18, 0x01	; 1
+    1390:	30 e0       	ldi	r19, 0x00	; 0
+    1392:	b9 01       	movw	r22, r18
+    1394:	02 c0       	rjmp	.+4      	; 0x139a <DIO_ConfigureChannel+0xdc>
+    1396:	66 0f       	add	r22, r22
+    1398:	77 1f       	adc	r23, r23
+    139a:	8a 95       	dec	r24
+    139c:	e2 f7       	brpl	.-8      	; 0x1396 <DIO_ConfigureChannel+0xd8>
+    139e:	cb 01       	movw	r24, r22
+    13a0:	84 2b       	or	r24, r20
+    13a2:	81 bb       	out	0x11, r24	; 17
+    13a4:	08 95       	ret
+    13a6:	41 b3       	in	r20, 0x11	; 17
+    13a8:	21 e0       	ldi	r18, 0x01	; 1
+    13aa:	30 e0       	ldi	r19, 0x00	; 0
+    13ac:	b9 01       	movw	r22, r18
+    13ae:	02 c0       	rjmp	.+4      	; 0x13b4 <DIO_ConfigureChannel+0xf6>
+    13b0:	66 0f       	add	r22, r22
+    13b2:	77 1f       	adc	r23, r23
+    13b4:	8a 95       	dec	r24
+    13b6:	e2 f7       	brpl	.-8      	; 0x13b0 <DIO_ConfigureChannel+0xf2>
+    13b8:	cb 01       	movw	r24, r22
+    13ba:	80 95       	com	r24
+    13bc:	84 23       	and	r24, r20
+    13be:	81 bb       	out	0x11, r24	; 17
+    13c0:	08 95       	ret
+
+000013c2 <DIO_Init>:
+    13c2:	80 e0       	ldi	r24, 0x00	; 0
+    13c4:	a0 c0       	rjmp	.+320    	; 0x1506 <DIO_Init+0x144>
+    13c6:	98 2f       	mov	r25, r24
+    13c8:	96 95       	lsr	r25
+    13ca:	96 95       	lsr	r25
+    13cc:	96 95       	lsr	r25
+    13ce:	28 2f       	mov	r18, r24
+    13d0:	27 70       	andi	r18, 0x07	; 7
+    13d2:	91 30       	cpi	r25, 0x01	; 1
+    13d4:	61 f1       	breq	.+88     	; 0x142e <DIO_Init+0x6c>
+    13d6:	38 f0       	brcs	.+14     	; 0x13e6 <DIO_Init+0x24>
+    13d8:	92 30       	cpi	r25, 0x02	; 2
+    13da:	09 f4       	brne	.+2      	; 0x13de <DIO_Init+0x1c>
+    13dc:	4c c0       	rjmp	.+152    	; 0x1476 <DIO_Init+0xb4>
+    13de:	93 30       	cpi	r25, 0x03	; 3
+    13e0:	09 f4       	brne	.+2      	; 0x13e4 <DIO_Init+0x22>
+    13e2:	6d c0       	rjmp	.+218    	; 0x14be <DIO_Init+0xfc>
+    13e4:	8f c0       	rjmp	.+286    	; 0x1504 <DIO_Init+0x142>
+    13e6:	e8 2f       	mov	r30, r24
+    13e8:	f0 e0       	ldi	r31, 0x00	; 0
+    13ea:	ee 0f       	add	r30, r30
+    13ec:	ff 1f       	adc	r31, r31
+    13ee:	e7 58       	subi	r30, 0x87	; 135
+    13f0:	ff 4f       	sbci	r31, 0xFF	; 255
+    13f2:	90 81       	ld	r25, Z
+    13f4:	91 30       	cpi	r25, 0x01	; 1
+    13f6:	69 f4       	brne	.+26     	; 0x1412 <DIO_Init+0x50>
+    13f8:	9a b3       	in	r25, 0x1a	; 26
+    13fa:	41 e0       	ldi	r20, 0x01	; 1
+    13fc:	50 e0       	ldi	r21, 0x00	; 0
+    13fe:	ba 01       	movw	r22, r20
+    1400:	02 c0       	rjmp	.+4      	; 0x1406 <DIO_Init+0x44>
+    1402:	66 0f       	add	r22, r22
+    1404:	77 1f       	adc	r23, r23
+    1406:	2a 95       	dec	r18
+    1408:	e2 f7       	brpl	.-8      	; 0x1402 <DIO_Init+0x40>
+    140a:	9b 01       	movw	r18, r22
+    140c:	29 2b       	or	r18, r25
+    140e:	2a bb       	out	0x1a, r18	; 26
+    1410:	79 c0       	rjmp	.+242    	; 0x1504 <DIO_Init+0x142>
+    1412:	9a b3       	in	r25, 0x1a	; 26
+    1414:	41 e0       	ldi	r20, 0x01	; 1
+    1416:	50 e0       	ldi	r21, 0x00	; 0
+    1418:	ba 01       	movw	r22, r20
+    141a:	02 c0       	rjmp	.+4      	; 0x1420 <DIO_Init+0x5e>
+    141c:	66 0f       	add	r22, r22
+    141e:	77 1f       	adc	r23, r23
+    1420:	2a 95       	dec	r18
+    1422:	e2 f7       	brpl	.-8      	; 0x141c <DIO_Init+0x5a>
+    1424:	9b 01       	movw	r18, r22
+    1426:	20 95       	com	r18
+    1428:	29 23       	and	r18, r25
+    142a:	2a bb       	out	0x1a, r18	; 26
+    142c:	6b c0       	rjmp	.+214    	; 0x1504 <DIO_Init+0x142>
+    142e:	e8 2f       	mov	r30, r24
+    1430:	f0 e0       	ldi	r31, 0x00	; 0
+    1432:	ee 0f       	add	r30, r30
+    1434:	ff 1f       	adc	r31, r31
+    1436:	e7 58       	subi	r30, 0x87	; 135
+    1438:	ff 4f       	sbci	r31, 0xFF	; 255
+    143a:	90 81       	ld	r25, Z
+    143c:	91 30       	cpi	r25, 0x01	; 1
+    143e:	69 f4       	brne	.+26     	; 0x145a <DIO_Init+0x98>
+    1440:	97 b3       	in	r25, 0x17	; 23
+    1442:	41 e0       	ldi	r20, 0x01	; 1
+    1444:	50 e0       	ldi	r21, 0x00	; 0
+    1446:	ba 01       	movw	r22, r20
+    1448:	02 c0       	rjmp	.+4      	; 0x144e <DIO_Init+0x8c>
+    144a:	66 0f       	add	r22, r22
+    144c:	77 1f       	adc	r23, r23
+    144e:	2a 95       	dec	r18
+    1450:	e2 f7       	brpl	.-8      	; 0x144a <DIO_Init+0x88>
+    1452:	9b 01       	movw	r18, r22
+    1454:	29 2b       	or	r18, r25
+    1456:	27 bb       	out	0x17, r18	; 23
+    1458:	55 c0       	rjmp	.+170    	; 0x1504 <DIO_Init+0x142>
+    145a:	97 b3       	in	r25, 0x17	; 23
+    145c:	41 e0       	ldi	r20, 0x01	; 1
+    145e:	50 e0       	ldi	r21, 0x00	; 0
+    1460:	ba 01       	movw	r22, r20
+    1462:	02 c0       	rjmp	.+4      	; 0x1468 <DIO_Init+0xa6>
+    1464:	66 0f       	add	r22, r22
+    1466:	77 1f       	adc	r23, r23
+    1468:	2a 95       	dec	r18
+    146a:	e2 f7       	brpl	.-8      	; 0x1464 <DIO_Init+0xa2>
+    146c:	9b 01       	movw	r18, r22
+    146e:	20 95       	com	r18
+    1470:	29 23       	and	r18, r25
+    1472:	27 bb       	out	0x17, r18	; 23
+    1474:	47 c0       	rjmp	.+142    	; 0x1504 <DIO_Init+0x142>
+    1476:	e8 2f       	mov	r30, r24
+    1478:	f0 e0       	ldi	r31, 0x00	; 0
+    147a:	ee 0f       	add	r30, r30
+    147c:	ff 1f       	adc	r31, r31
+    147e:	e7 58       	subi	r30, 0x87	; 135
+    1480:	ff 4f       	sbci	r31, 0xFF	; 255
+    1482:	90 81       	ld	r25, Z
+    1484:	91 30       	cpi	r25, 0x01	; 1
+    1486:	69 f4       	brne	.+26     	; 0x14a2 <DIO_Init+0xe0>
+    1488:	94 b3       	in	r25, 0x14	; 20
+    148a:	41 e0       	ldi	r20, 0x01	; 1
+    148c:	50 e0       	ldi	r21, 0x00	; 0
+    148e:	ba 01       	movw	r22, r20
+    1490:	02 c0       	rjmp	.+4      	; 0x1496 <DIO_Init+0xd4>
+    1492:	66 0f       	add	r22, r22
+    1494:	77 1f       	adc	r23, r23
+    1496:	2a 95       	dec	r18
+    1498:	e2 f7       	brpl	.-8      	; 0x1492 <DIO_Init+0xd0>
+    149a:	9b 01       	movw	r18, r22
+    149c:	29 2b       	or	r18, r25
+    149e:	24 bb       	out	0x14, r18	; 20
+    14a0:	31 c0       	rjmp	.+98     	; 0x1504 <DIO_Init+0x142>
+    14a2:	94 b3       	in	r25, 0x14	; 20
+    14a4:	41 e0       	ldi	r20, 0x01	; 1
+    14a6:	50 e0       	ldi	r21, 0x00	; 0
+    14a8:	ba 01       	movw	r22, r20
+    14aa:	02 c0       	rjmp	.+4      	; 0x14b0 <DIO_Init+0xee>
+    14ac:	66 0f       	add	r22, r22
+    14ae:	77 1f       	adc	r23, r23
+    14b0:	2a 95       	dec	r18
+    14b2:	e2 f7       	brpl	.-8      	; 0x14ac <DIO_Init+0xea>
+    14b4:	9b 01       	movw	r18, r22
+    14b6:	20 95       	com	r18
+    14b8:	29 23       	and	r18, r25
+    14ba:	24 bb       	out	0x14, r18	; 20
+    14bc:	23 c0       	rjmp	.+70     	; 0x1504 <DIO_Init+0x142>
+    14be:	e8 2f       	mov	r30, r24
+    14c0:	f0 e0       	ldi	r31, 0x00	; 0
+    14c2:	ee 0f       	add	r30, r30
+    14c4:	ff 1f       	adc	r31, r31
+    14c6:	e7 58       	subi	r30, 0x87	; 135
+    14c8:	ff 4f       	sbci	r31, 0xFF	; 255
+    14ca:	90 81       	ld	r25, Z
+    14cc:	91 30       	cpi	r25, 0x01	; 1
+    14ce:	69 f4       	brne	.+26     	; 0x14ea <DIO_Init+0x128>
+    14d0:	91 b3       	in	r25, 0x11	; 17
+    14d2:	41 e0       	ldi	r20, 0x01	; 1
+    14d4:	50 e0       	ldi	r21, 0x00	; 0
+    14d6:	ba 01       	movw	r22, r20
+    14d8:	02 c0       	rjmp	.+4      	; 0x14de <DIO_Init+0x11c>
+    14da:	66 0f       	add	r22, r22
+    14dc:	77 1f       	adc	r23, r23
+    14de:	2a 95       	dec	r18
+    14e0:	e2 f7       	brpl	.-8      	; 0x14da <DIO_Init+0x118>
+    14e2:	9b 01       	movw	r18, r22
+    14e4:	29 2b       	or	r18, r25
+    14e6:	21 bb       	out	0x11, r18	; 17
+    14e8:	0d c0       	rjmp	.+26     	; 0x1504 <DIO_Init+0x142>
+    14ea:	91 b3       	in	r25, 0x11	; 17
+    14ec:	41 e0       	ldi	r20, 0x01	; 1
+    14ee:	50 e0       	ldi	r21, 0x00	; 0
+    14f0:	ba 01       	movw	r22, r20
+    14f2:	02 c0       	rjmp	.+4      	; 0x14f8 <DIO_Init+0x136>
+    14f4:	66 0f       	add	r22, r22
+    14f6:	77 1f       	adc	r23, r23
+    14f8:	2a 95       	dec	r18
+    14fa:	e2 f7       	brpl	.-8      	; 0x14f4 <DIO_Init+0x132>
+    14fc:	9b 01       	movw	r18, r22
+    14fe:	20 95       	com	r18
+    1500:	29 23       	and	r18, r25
+    1502:	21 bb       	out	0x11, r18	; 17
+    1504:	8f 5f       	subi	r24, 0xFF	; 255
+    1506:	80 32       	cpi	r24, 0x20	; 32
+    1508:	08 f4       	brcc	.+2      	; 0x150c <DIO_Init+0x14a>
+    150a:	5d cf       	rjmp	.-326    	; 0x13c6 <DIO_Init+0x4>
+    150c:	08 95       	ret
+
+0000150e <SPI_Init>:
+    150e:	88 23       	and	r24, r24
+    1510:	c9 f0       	breq	.+50     	; 0x1544 <SPI_Init+0x36>
+    1512:	81 30       	cpi	r24, 0x01	; 1
+    1514:	51 f5       	brne	.+84     	; 0x156a <SPI_Init+0x5c>
+    1516:	61 e0       	ldi	r22, 0x01	; 1
+    1518:	8c e0       	ldi	r24, 0x0C	; 12
+    151a:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    151e:	61 e0       	ldi	r22, 0x01	; 1
+    1520:	8d e0       	ldi	r24, 0x0D	; 13
+    1522:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    1526:	60 e0       	ldi	r22, 0x00	; 0
+    1528:	8e e0       	ldi	r24, 0x0E	; 14
+    152a:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    152e:	61 e0       	ldi	r22, 0x01	; 1
+    1530:	8f e0       	ldi	r24, 0x0F	; 15
+    1532:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    1536:	8d b1       	in	r24, 0x0d	; 13
+    1538:	80 61       	ori	r24, 0x10	; 16
+    153a:	8d b9       	out	0x0d, r24	; 13
+    153c:	8d b1       	in	r24, 0x0d	; 13
+    153e:	80 64       	ori	r24, 0x40	; 64
+    1540:	8d b9       	out	0x0d, r24	; 13
+    1542:	08 95       	ret
+    1544:	61 e0       	ldi	r22, 0x01	; 1
+    1546:	8c e0       	ldi	r24, 0x0C	; 12
+    1548:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    154c:	61 e0       	ldi	r22, 0x01	; 1
+    154e:	8d e0       	ldi	r24, 0x0D	; 13
+    1550:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    1554:	60 e0       	ldi	r22, 0x00	; 0
+    1556:	8e e0       	ldi	r24, 0x0E	; 14
+    1558:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    155c:	61 e0       	ldi	r22, 0x01	; 1
+    155e:	8f e0       	ldi	r24, 0x0F	; 15
+    1560:	0e 94 5f 09 	call	0x12be	; 0x12be <DIO_ConfigureChannel>
+    1564:	8d b1       	in	r24, 0x0d	; 13
+    1566:	80 64       	ori	r24, 0x40	; 64
+    1568:	8d b9       	out	0x0d, r24	; 13
+    156a:	08 95       	ret
+
+0000156c <SPI_TxRx>:
+    156c:	8f b9       	out	0x0f, r24	; 15
+    156e:	77 9b       	sbis	0x0e, 7	; 14
+    1570:	fe cf       	rjmp	.-4      	; 0x156e <SPI_TxRx+0x2>
+    1572:	8f b1       	in	r24, 0x0f	; 15
+    1574:	08 95       	ret
+
+00001576 <Uart_Init>:
+    1576:	88 e9       	ldi	r24, 0x98	; 152
+    1578:	8a b9       	out	0x0a, r24	; 10
+    157a:	86 e8       	ldi	r24, 0x86	; 134
+    157c:	80 bd       	out	0x20, r24	; 32
+    157e:	87 e6       	ldi	r24, 0x67	; 103
+    1580:	89 b9       	out	0x09, r24	; 9
+    1582:	10 bc       	out	0x20, r1	; 32
+    1584:	78 94       	sei
+    1586:	08 95       	ret
+
+00001588 <Uart_Transmit>:
+    1588:	5d 9b       	sbis	0x0b, 5	; 11
+    158a:	fe cf       	rjmp	.-4      	; 0x1588 <Uart_Transmit>
+    158c:	8c b9       	out	0x0c, r24	; 12
+    158e:	08 95       	ret
+
+00001590 <Uart_TransmitString>:
+    1590:	0f 93       	push	r16
+    1592:	1f 93       	push	r17
+    1594:	cf 93       	push	r28
+    1596:	8c 01       	movw	r16, r24
+    1598:	c0 e0       	ldi	r28, 0x00	; 0
+    159a:	03 c0       	rjmp	.+6      	; 0x15a2 <Uart_TransmitString+0x12>
+    159c:	0e 94 c4 0a 	call	0x1588	; 0x1588 <Uart_Transmit>
+    15a0:	cf 5f       	subi	r28, 0xFF	; 255
+    15a2:	f8 01       	movw	r30, r16
+    15a4:	ec 0f       	add	r30, r28
+    15a6:	f1 1d       	adc	r31, r1
+    15a8:	80 81       	ld	r24, Z
+    15aa:	81 11       	cpse	r24, r1
+    15ac:	f7 cf       	rjmp	.-18     	; 0x159c <Uart_TransmitString+0xc>
+    15ae:	cf 91       	pop	r28
+    15b0:	1f 91       	pop	r17
+    15b2:	0f 91       	pop	r16
+    15b4:	08 95       	ret
+
+000015b6 <New_line>:
+    15b6:	8a e0       	ldi	r24, 0x0A	; 10
+    15b8:	0e 94 c4 0a 	call	0x1588	; 0x1588 <Uart_Transmit>
+    15bc:	08 95       	ret
+
+000015be <Uart_T_Admin_menu>:
+    15be:	87 e7       	ldi	r24, 0x77	; 119
+    15c0:	92 e0       	ldi	r25, 0x02	; 2
+    15c2:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    15c6:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    15ca:	8f e7       	ldi	r24, 0x7F	; 127
+    15cc:	92 e0       	ldi	r25, 0x02	; 2
+    15ce:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    15d2:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    15d6:	87 e8       	ldi	r24, 0x87	; 135
+    15d8:	92 e0       	ldi	r25, 0x02	; 2
+    15da:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    15de:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    15e2:	8f e8       	ldi	r24, 0x8F	; 143
+    15e4:	92 e0       	ldi	r25, 0x02	; 2
+    15e6:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    15ea:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    15ee:	87 e9       	ldi	r24, 0x97	; 151
+    15f0:	92 e0       	ldi	r25, 0x02	; 2
+    15f2:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    15f6:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    15fa:	8f e9       	ldi	r24, 0x9F	; 159
+    15fc:	92 e0       	ldi	r25, 0x02	; 2
+    15fe:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    1602:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    1606:	88 ea       	ldi	r24, 0xA8	; 168
+    1608:	92 e0       	ldi	r25, 0x02	; 2
+    160a:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    160e:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    1612:	8d ea       	ldi	r24, 0xAD	; 173
+    1614:	92 e0       	ldi	r25, 0x02	; 2
+    1616:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    161a:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    161e:	84 eb       	ldi	r24, 0xB4	; 180
+    1620:	92 e0       	ldi	r25, 0x02	; 2
+    1622:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    1626:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    162a:	8d eb       	ldi	r24, 0xBD	; 189
+    162c:	92 e0       	ldi	r25, 0x02	; 2
+    162e:	0e 94 c8 0a 	call	0x1590	; 0x1590 <Uart_TransmitString>
+    1632:	0e 94 db 0a 	call	0x15b6	; 0x15b6 <New_line>
+    1636:	08 95       	ret
+
+00001638 <__tablejump2__>:
+    1638:	ee 0f       	add	r30, r30
+    163a:	ff 1f       	adc	r31, r31
+    163c:	05 90       	lpm	r0, Z+
+    163e:	f4 91       	lpm	r31, Z
+    1640:	e0 2d       	mov	r30, r0
+    1642:	09 94       	ijmp
+
+00001644 <__itoa_ncheck>:
+    1644:	bb 27       	eor	r27, r27
+    1646:	4a 30       	cpi	r20, 0x0A	; 10
+    1648:	31 f4       	brne	.+12     	; 0x1656 <__itoa_ncheck+0x12>
+    164a:	99 23       	and	r25, r25
+    164c:	22 f4       	brpl	.+8      	; 0x1656 <__itoa_ncheck+0x12>
+    164e:	bd e2       	ldi	r27, 0x2D	; 45
+    1650:	90 95       	com	r25
+    1652:	81 95       	neg	r24
+    1654:	9f 4f       	sbci	r25, 0xFF	; 255
+    1656:	0c 94 2e 0b 	jmp	0x165c	; 0x165c <__utoa_common>
+
+0000165a <__utoa_ncheck>:
+    165a:	bb 27       	eor	r27, r27
+
+0000165c <__utoa_common>:
+    165c:	fb 01       	movw	r30, r22
+    165e:	55 27       	eor	r21, r21
+    1660:	aa 27       	eor	r26, r26
+    1662:	88 0f       	add	r24, r24
+    1664:	99 1f       	adc	r25, r25
+    1666:	aa 1f       	adc	r26, r26
+    1668:	a4 17       	cp	r26, r20
+    166a:	10 f0       	brcs	.+4      	; 0x1670 <__utoa_common+0x14>
+    166c:	a4 1b       	sub	r26, r20
+    166e:	83 95       	inc	r24
+    1670:	50 51       	subi	r21, 0x10	; 16
+    1672:	b9 f7       	brne	.-18     	; 0x1662 <__utoa_common+0x6>
+    1674:	a0 5d       	subi	r26, 0xD0	; 208
+    1676:	aa 33       	cpi	r26, 0x3A	; 58
+    1678:	08 f0       	brcs	.+2      	; 0x167c <__utoa_common+0x20>
+    167a:	a9 5d       	subi	r26, 0xD9	; 217
+    167c:	a1 93       	st	Z+, r26
+    167e:	00 97       	sbiw	r24, 0x00	; 0
+    1680:	79 f7       	brne	.-34     	; 0x1660 <__utoa_common+0x4>
+    1682:	b1 11       	cpse	r27, r1
+    1684:	b1 93       	st	Z+, r27
+    1686:	11 92       	st	Z+, r1
+    1688:	cb 01       	movw	r24, r22
+    168a:	0c 94 47 0b 	jmp	0x168e	; 0x168e <strrev>
+
+0000168e <strrev>:
+    168e:	dc 01       	movw	r26, r24
+    1690:	fc 01       	movw	r30, r24
+    1692:	67 2f       	mov	r22, r23
+    1694:	71 91       	ld	r23, Z+
+    1696:	77 23       	and	r23, r23
+    1698:	e1 f7       	brne	.-8      	; 0x1692 <strrev+0x4>
+    169a:	32 97       	sbiw	r30, 0x02	; 2
+    169c:	04 c0       	rjmp	.+8      	; 0x16a6 <strrev+0x18>
+    169e:	7c 91       	ld	r23, X
+    16a0:	6d 93       	st	X+, r22
+    16a2:	70 83       	st	Z, r23
+    16a4:	62 91       	ld	r22, -Z
+    16a6:	ae 17       	cp	r26, r30
+    16a8:	bf 07       	cpc	r27, r31
+    16aa:	c8 f3       	brcs	.-14     	; 0x169e <strrev+0x10>
+    16ac:	08 95       	ret
+
+000016ae <_exit>:
+    16ae:	f8 94       	cli
+
+000016b0 <__stop_program>:
+    16b0:	ff cf       	rjmp	.-2      	; 0x16b0 <__stop_program>
